@@ -1,4 +1,9 @@
 # pySL
+
+This public repository starts from a fresh snapshot of the development
+repository. The `paper-a-v1.1.0` tag preserves the exact released source and
+processed data; subsequent commits update public-facing documentation.
+Earlier development history and branches are not included.
  
 ## Table of Contents
 - [pySL](#pysl)
@@ -169,7 +174,7 @@ python pySLbatch.py --config batch_configs.mironowicz_theta_sweep --manifest-onl
 
 `paper-a-v1.1.0` is the Paper-A successor release and includes the latest
 code, batch configurations, and the fixed-RMS Gaussian field mean/width study.
-The earlier `paper-a-v1.0.0` tag remains the historical initial release.
+The earlier `paper-a-v1.0.0` release is not included in this public repository.
 
 The compact, public reproduction package is documented in
 [paper_a/README.md](paper_a/README.md). Its saved tables and scripts regenerate

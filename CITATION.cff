@@ -7,8 +7,8 @@ authors:
 type: software
 version: 1.1.0
 date-released: 2026-09-09
-repository-code: "https://github.com/ALasek/pySL_qubits"
-url: "https://github.com/ALasek/pySL_qubits"
+repository-code: "https://github.com/ALasek/pySL_qubits-public"
+url: "https://github.com/ALasek/pySL_qubits-public"
 license: BSD-3-Clause
 keywords:
   - quantum Darwinism

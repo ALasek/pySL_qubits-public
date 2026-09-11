@@ -2,8 +2,8 @@
 
 `paper-a-v1.1.0` (2026-09-09) is the successor Paper-A software release. It
 captures the current simulator, batch configurations, analysis code, and the
-fixed-RMS Gaussian field mean/width study. `paper-a-v1.0.0` remains the
-historical initial release.
+fixed-RMS Gaussian field mean/width study. The historical `paper-a-v1.0.0` release is not included in this public
+repository.
 
 ## Compact public reproduction
 
