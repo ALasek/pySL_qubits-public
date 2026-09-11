@@ -1,0 +1,27 @@
+{
+  "study_id": "qdsummary_Stab_pi0_dt_metrics_v1",
+  "description": "Full MI, Holevo, and discord timestep comparison at the controlling job-3 parameter point.",
+  "config_module": "batch_configs.qdsummary_replace_fig_Stab_pi0_p_alpha2_sweep",
+  "subdir": "_experiments/qdsummary_Stab_pi0_dt_metrics_v1",
+  "reference_dt_for_sampled_metrics": 0.000125,
+  "tail_start": 20.0,
+  "dT_values": [0.000125, 0.0005, 0.000625],
+  "params_overrides": {
+    "AverageOverRunsN": 1,
+    "seed": 3212275105,
+    "psi_bias": 0.5,
+    "Mironowicz_alpha2": 3.0,
+    "dT": 0.0005,
+    "T": 30,
+    "printT": 5,
+    "store_psi": true,
+    "store_psi_on_disk": true,
+    "store_correlators": false,
+    "compute_discord": true,
+    "profile_evolution": true,
+    "profile_evolution_max_steps": 200,
+    "log_gpu_memory": false,
+    "plot_mode": "none",
+    "save_figures": "off"
+  }
+}

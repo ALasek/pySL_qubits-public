@@ -1,0 +1,493 @@
+{
+  "schema_version": 1,
+  "suite_id": "solver-regression-v1",
+  "description": "Small deterministic GPU runs frozen before correcting the staggered evolution.",
+  "comparison_profiles": {
+    "strict": {
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "purpose": "Detect unintended changes while the numerical algorithm is unchanged."
+    },
+    "scientific": {
+      "atol": 0.005,
+      "rtol": 0.02,
+      "purpose": "Initial post-integrator-change screening; inspect the detailed report even when it passes."
+    }
+  },
+  "compare_fields": [
+    "S_vn_runAv",
+    "S_vn_runSTD",
+    "S_vn_runSEM",
+    "I_S_Ef_fractionsT_runAv",
+    "I_S_Ef_fractionsT_STD_runAv",
+    "I_S_Ef_fractionsT_runSTD",
+    "I_S_Ef_fractionsT_runSEM",
+    "Holevo_Z_S_Ef_fractionsT_runAv",
+    "Holevo_Z_S_Ef_fractionsT_STD_runAv",
+    "Holevo_Z_S_Ef_fractionsT_runSTD",
+    "Holevo_Z_S_Ef_fractionsT_runSEM",
+    "Discord_Z_S_Ef_fractionsT_runAv",
+    "Discord_Z_S_Ef_fractionsT_STD_runAv",
+    "Discord_Z_S_Ef_fractionsT_runSTD",
+    "Discord_Z_S_Ef_fractionsT_runSEM",
+    "TraceDist_fractionsT_runAv",
+    "TraceDist_fractionsT_STD_runAv",
+    "TraceDist_fractionsT_runSTD",
+    "TraceDist_fractionsT_runSEM",
+    "rhoS_T",
+    "rhoS_purity",
+    "C_correlators",
+    "C_connected_correlators",
+    "C_SE_correlators",
+    "corr_spread_radius_T_runAv",
+    "corr_offdiag_fraction_T_runAv",
+    "corr_total_connected_weight_T_runAv",
+    "corr_nn_weight_T_runAv",
+    "corr_nn_fraction_T_runAv",
+    "norms",
+    "modified_norms"
+  ],
+  "summary_fields": [
+    "S_vn_runAv",
+    "I_S_Ef_fractionsT_runAv",
+    "Holevo_Z_S_Ef_fractionsT_runAv",
+    "Discord_Z_S_Ef_fractionsT_runAv",
+    "rhoS_purity",
+    "C_connected_correlators",
+    "corr_spread_radius_T_runAv",
+    "norms",
+    "modified_norms"
+  ],
+  "cases": [
+    {
+      "id": "mironowicz_rand_real",
+      "description": "Real random Mironowicz Hamiltonian with discord and correlator diagnostics.",
+      "config": "configs/mironowicz_rand_real.json",
+      "reference": "baselines/mironowicz_rand_real",
+      "baseline": {
+        "recorded_at": "2026-07-12T00:32:25.348976+00:00",
+        "run_id": "bbdb3f97f5d61d38a739c6d0519430e959b66aac5ace450d5440433eb60be782",
+        "params_sha256": "6d361d1f2963b43dc6712c20ca6cc1740300b0cb38f006dd7fc22c73d1998faa",
+        "results_sha256": "e1126987473f52d0b19b3b720c6ac9a41e54ebc0c8f60217ca52652b463283e1",
+        "typical_results": {
+          "S_vn_runAv": {
+            "shape": [
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.39090341329574585,
+            "mean": 0.16992459384103617,
+            "l2": 0.6473422268868355,
+            "final": 0.39090341329574585
+          },
+          "I_S_Ef_fractionsT_runAv": {
+            "shape": [
+              5,
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.7814461642701644,
+            "mean": 0.17384607113482262,
+            "l2": 1.8135078097835582,
+            "final": 0.7814461642701644
+          },
+          "Holevo_Z_S_Ef_fractionsT_runAv": {
+            "shape": [
+              5,
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.390903234484294,
+            "mean": 0.09363263657364022,
+            "l2": 0.9613577958033057,
+            "final": 0.390903234484294
+          },
+          "Discord_Z_S_Ef_fractionsT_runAv": {
+            "shape": [
+              5,
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.39054292978587046,
+            "mean": 0.07997991481451344,
+            "l2": 0.8559336614059202,
+            "final": 0.39054292978587046
+          },
+          "rhoS_purity": {
+            "shape": [
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.7698917388916016,
+            "max": 1.000000238418579,
+            "mean": 0.9111252692010667,
+            "l2": 2.7434296107642098,
+            "final": 0.7698917388916016
+          },
+          "C_connected_correlators": {
+            "shape": [
+              9,
+              4,
+              4
+            ],
+            "dtype": "complex64",
+            "complex_magnitude": true,
+            "nan_count": 0,
+            "min": 3.4248346381104966e-09,
+            "max": 0.851762056350708,
+            "mean": 0.09581613540649414,
+            "l2": 2.7771530151367188,
+            "final": 0.22396649420261383
+          },
+          "corr_spread_radius_T_runAv": {
+            "shape": [
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 2.628086687743406e-07,
+            "max": 0.002091219284984774,
+            "mean": 0.0009849432527721123,
+            "l2": 0.00365352303459406,
+            "final": 0.00024766920800603026
+          },
+          "norms": {
+            "shape": [
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.9994105696678162,
+            "max": 1.0,
+            "mean": 0.9997032615873549,
+            "l2": 2.9991098410234973,
+            "final": 0.9998197555541992
+          },
+          "modified_norms": {
+            "shape": [
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.9996250867843628,
+            "max": 0.9996253848075867,
+            "mean": 0.999625219239129,
+            "l2": 2.998875657717403,
+            "final": 0.9996252655982971
+          }
+        }
+      }
+    },
+    {
+      "id": "mironowicz_transverse_complex",
+      "description": "Complex Hermitian transverse E-E Hamiltonian exercising the Y contribution.",
+      "config": "configs/mironowicz_transverse_complex.json",
+      "reference": "baselines/mironowicz_transverse_complex",
+      "baseline": {
+        "recorded_at": "2026-07-12T00:32:25.348976+00:00",
+        "run_id": "20430ae894bcfe0cf0bcc758cf6d78ec234f98ab46b8437db86d819bee25ec51",
+        "params_sha256": "2a1b2a72e041d4032acbf2eaad3ce6e881ef99123a86e0b716bbf1fc04446012",
+        "results_sha256": "3e2c98d55bd2cd27c224d02e2423e27303f06c6fb7480d717b5da974413fb9b8",
+        "typical_results": {
+          "S_vn_runAv": {
+            "shape": [
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.027736322954297066,
+            "mean": 0.013881699596014287,
+            "l2": 0.05295294085065222,
+            "final": 0.017756421118974686
+          },
+          "I_S_Ef_fractionsT_runAv": {
+            "shape": [
+              5,
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.05556046233687084,
+            "mean": 0.013633501692836742,
+            "l2": 0.14719669941862387,
+            "final": 0.0354691827960778
+          },
+          "Holevo_Z_S_Ef_fractionsT_runAv": {
+            "shape": [
+              5,
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.027736062235146363,
+            "mean": 0.0060986546659248485,
+            "l2": 0.06914662900783188,
+            "final": 0.017756465825595272
+          },
+          "Discord_Z_S_Ef_fractionsT_runAv": {
+            "shape": [
+              5,
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.02782440010172448,
+            "mean": 0.007479294737418595,
+            "l2": 0.07847236941791313,
+            "final": 0.01771271697048253
+          },
+          "rhoS_purity": {
+            "shape": [
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.9915753602981567,
+            "max": 1.0,
+            "mean": 0.9957093795140585,
+            "l2": 2.987142677143681,
+            "final": 0.9948462247848511
+          },
+          "C_connected_correlators": {
+            "shape": [
+              9,
+              4,
+              4
+            ],
+            "dtype": "complex64",
+            "complex_magnitude": true,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.9949378371238708,
+            "mean": 0.1412387490272522,
+            "l2": 3.7565839290618896,
+            "final": 0.8566733598709106
+          },
+          "corr_spread_radius_T_runAv": {
+            "shape": [
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 6.402080188709462e-08,
+            "max": 0.1757188946864101,
+            "mean": 0.0614006875802641,
+            "l2": 0.23995726188842637,
+            "final": 0.1757188946864101
+          },
+          "norms": {
+            "shape": [
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.9999297857284546,
+            "max": 1.0001022815704346,
+            "mean": 0.99999557601081,
+            "l2": 2.9999867316203512,
+            "final": 0.9999780654907227
+          },
+          "modified_norms": {
+            "shape": [
+              9
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.9999947547912598,
+            "max": 0.9999949932098389,
+            "mean": 0.9999949004915025,
+            "l2": 2.9999847014745185,
+            "final": 0.9999949336051941
+          }
+        }
+      }
+    },
+    {
+      "id": "mironowicz_averaged_bias",
+      "description": "Two deterministic realizations covering seed expansion and run averaging.",
+      "config": "configs/mironowicz_averaged_bias.json",
+      "reference": "baselines/mironowicz_averaged_bias",
+      "baseline": {
+        "recorded_at": "2026-07-12T00:32:25.348976+00:00",
+        "run_id": "0aa3c65d2c4045f83fe33067f889829433d531d747ee1b0387888622a03b8fc5",
+        "params_sha256": "da6378f70022e04015befa392b8ec8401af1836203b91fb33d27824d221b42c0",
+        "results_sha256": "ebbf4307a22364f9d82ee69518092e7cc2c6260184918242eb1493d77a4f3e80",
+        "typical_results": {
+          "S_vn_runAv": {
+            "shape": [
+              5
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.049863725900650024,
+            "mean": 0.01826732400804758,
+            "l2": 0.05946476767834471,
+            "final": 0.049863725900650024
+          },
+          "I_S_Ef_fractionsT_runAv": {
+            "shape": [
+              4,
+              5
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.1000181806011824,
+            "mean": 0.01916423579471787,
+            "l2": 0.15014110645466658,
+            "final": 0.1000181806011824
+          },
+          "Holevo_Z_S_Ef_fractionsT_runAv": {
+            "shape": [
+              4,
+              5
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.049863663498043775,
+            "mean": 0.009125179540446088,
+            "l2": 0.07515440437872312,
+            "final": 0.049863663498043775
+          },
+          "Discord_Z_S_Ef_fractionsT_runAv": {
+            "shape": [
+              4,
+              5
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.0,
+            "max": 0.05015451710313862,
+            "mean": 0.009900595908958426,
+            "l2": 0.07531360069757313,
+            "final": 0.05015451710313862
+          },
+          "rhoS_purity": {
+            "shape": [
+              5
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 0.982716828584671,
+            "max": 1.0,
+            "mean": 0.9938859403133392,
+            "l2": 2.2224434506194846,
+            "final": 0.982716828584671
+          },
+          "C_connected_correlators": {
+            "shape": [
+              5,
+              3,
+              3
+            ],
+            "dtype": "complex64",
+            "complex_magnitude": true,
+            "nan_count": 0,
+            "min": 1.4901161193847656e-08,
+            "max": 0.9150078296661377,
+            "mean": 0.3033638000488281,
+            "l2": 3.5240190029144287,
+            "final": 0.9004033207893372
+          },
+          "corr_spread_radius_T_runAv": {
+            "shape": [
+              5
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 5.002615422223364e-08,
+            "max": 0.00036828452970054333,
+            "mean": 0.00024290615053924658,
+            "l2": 0.000618429837601338,
+            "final": 0.0002563783330993352
+          },
+          "norms": {
+            "shape": [
+              5
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 1.0,
+            "max": 1.0003172159194946,
+            "mean": 1.0001888751983643,
+            "l2": 2.236490329791383,
+            "final": 1.000134825706482
+          },
+          "modified_norms": {
+            "shape": [
+              5
+            ],
+            "dtype": "float64",
+            "complex_magnitude": false,
+            "nan_count": 0,
+            "min": 1.0,
+            "max": 1.000000238418579,
+            "mean": 1.0000000953674317,
+            "l2": 2.236068190747859,
+            "final": 1.000000238418579
+          }
+        }
+      }
+    }
+  ],
+  "baseline_provenance": {
+    "recorded_at": "2026-07-12T00:32:50.256680+00:00",
+    "git_commit": "a32ac794dca697451f9fb199e7be74ed997361bf",
+    "git_dirty": true,
+    "numerics_sha256": "9026b211e8148a432f9521ed0104a52e4c9b2e9208392976bea13a616a6de13b",
+    "numerics_files": [
+      "pySL.py",
+      "src/Qutils.py",
+      "src/sparse_operator.py",
+      "src/input/hamiltonian.py",
+      "src/input/wavefunction.py"
+    ],
+    "python": "3.11.9",
+    "python_implementation": "CPython",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "scipy": "1.15.2",
+    "cupy": "14.0.1",
+    "cuda_runtime": 13000,
+    "cuda_driver": 13030,
+    "gpu": "NVIDIA GeForce RTX 5090"
+  }
+}

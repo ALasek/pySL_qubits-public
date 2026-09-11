@@ -1,0 +1,18 @@
+{
+  "creators": [
+    {
+      "name": "Lasek, Aleksander"
+    }
+  ],
+  "description": "GPU simulation, batch configuration, and analysis software used for the Paper A study of imperfect controlled-NOT record formation in quantum Darwinism.",
+  "keywords": [
+    "quantum Darwinism",
+    "open quantum systems",
+    "Schrodinger equation",
+    "GPU simulation"
+  ],
+  "license": "BSD-3-Clause",
+  "title": "pySL_qubits: Quantum Darwinism simulation and analysis software",
+  "upload_type": "software",
+  "version": "1.0.0"
+}

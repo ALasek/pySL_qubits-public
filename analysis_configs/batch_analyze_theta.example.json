@@ -1,0 +1,15 @@
+{
+  "config": "batch_configs.mironowicz_theta_sweep",
+  "x": null,
+  "y": null,
+  "x_arr": null,
+  "y_arr": null,
+  "Tsample": null,
+  "nqubits": null,
+  "redundancyminfraction": null,
+  "setMinTime": null,
+  "plotData": null,
+  "smooth": false,
+  "subdir": null,
+  "dataOld": false
+}

@@ -1,0 +1,16 @@
+{
+  "batchConfig": "batch_configs.mironowicz_mbl_sweep",
+  "config": null,
+  "x": null,
+  "y": null,
+  "Tsample": null,
+  "nqubits": null,
+  "redundancyminfraction": null,
+  "setMinTime": null,
+  "plotData": null,
+  "smooth": false,
+  "subdir": null,
+  "dataOld": false,
+  "H_EE_J_arr": null,
+  "alpha2_arr": null
+}

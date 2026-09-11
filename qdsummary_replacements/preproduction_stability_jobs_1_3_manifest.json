@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-07-14",
+  "purpose": "Full-grid, single-realization previews of the three no-EE stability sweeps at dT=0.0025. These runs identify visual regimes before selectively launching lower-dT production replacements.",
+  "runner": {
+    "script": "scripts/run_qdsummary_replacements.py",
+    "default_command": "python scripts/run_qdsummary_replacements.py --manifest qdsummary_replacements/preproduction_stability_jobs_1_3_manifest.json --workers 2 --gpu-ids 0",
+    "dry_run_command": "python scripts/run_qdsummary_replacements.py --manifest qdsummary_replacements/preproduction_stability_jobs_1_3_manifest.json --workers 2 --gpu-ids 0 --dry-run"
+  },
+  "quality_policy": {
+    "dT": 0.0025,
+    "AverageOverRunsN": 1,
+    "seed": 3212275105,
+    "grid": "20x20",
+    "notes": "The seed is the highest-spectral-radius realization used by the full MI/Holevo/discord convergence checks. Preview output directories are isolated from the lower-dT V2 production directories."
+  },
+  "replacements": [
+    {
+      "labels": ["fig:Stab_pi4", "fig:analytic_stability_pi4"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_preprod_Stab_pi4_p_alpha2_sweep.py",
+      "notes": "Preproduction theta=pi/4 psi_bias/alpha2 stability sweep."
+    },
+    {
+      "labels": ["fig:Stab_pi8", "fig:analytic_stability_pi8"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_preprod_Stab_pi8_p_alpha2_sweep.py",
+      "notes": "Preproduction theta=pi/8 psi_bias/alpha2 stability sweep."
+    },
+    {
+      "labels": ["fig:Stab_pi0", "fig:analytic_stability_pi0"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_preprod_Stab_pi0_p_alpha2_sweep.py",
+      "notes": "Preproduction theta=0 psi_bias/alpha2 stability sweep."
+    }
+  ]
+}

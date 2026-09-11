@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-06-16",
+  "purpose": "Replacement plan for QD_summary figures affected by the old correlated Mironowicz random g_j/h_j draws. The fixed bias theta/alpha2 sweeps are excluded because they were already regenerated.",
+  "source_documents": {
+    "summary_tex": "D:/Github/Papers/projects/QD/_external/QD_summary/main.tex",
+    "summary_figures_root": "D:/Github/Papers/projects/QD/_external/QD_summary",
+    "simulation_repo": "D:/Github/pySL_qubits"
+  },
+  "runner": {
+    "script": "scripts/run_qdsummary_replacements.py",
+    "default_command": "python scripts/run_qdsummary_replacements.py",
+    "dry_run_command": "python scripts/run_qdsummary_replacements.py --dry-run",
+    "figures_only_command": "python scripts/run_qdsummary_replacements.py --figures-only",
+    "figure_outputs": {
+      "single_runs": "data/figs/qdsummary_single_replacements/<run_params_stem>/ and data/nonbatch/runs/<run_id>/figs/",
+      "batch_runs": "data/figs/<batch_subdir>/<analysis_bundle>/"
+    }
+  },
+  "common_quality_params": {
+    "AverageOverRunsN": 3,
+    "seed": 1337,
+    "nqubits_E": 17,
+    "dT": 0.002,
+    "T": 30,
+    "printT": 1,
+    "plot_mode": "none",
+    "H_precompute_mode": "grouped_cpu",
+    "H_precompute_group_size": 8
+  },
+  "additional_common_runtime_params": {
+    "QREmaxFragSize": 0,
+    "store_psi": false,
+    "store_psi_on_disk": false,
+    "store_correlators": false,
+    "save_legacy_rundata": false
+  },
+  "excluded_already_fixed": [
+    {
+      "labels": ["fig:bias035_theta_alpha2_sweep", "fig:bias035_theta_alpha2_distinguishability", "fig:bias035_theta_alpha2_analytic_approx"],
+      "reason": "The bias=0.35 theta/alpha2 sweep was already replaced by the randfix N=16 sweep."
+    },
+    {
+      "labels": ["fig:bias010_theta_alpha2_distinguishability", "fig:bias020_theta_alpha2_distinguishability", "fig:bias030_theta_alpha2_distinguishability", "fig:bias040_theta_alpha2_distinguishability"],
+      "reason": "The bias-series theta/alpha2 appendix sweeps were already added from the randfix sweep family."
+    }
+  ],
+  "replacements": [
+    {
+      "labels": ["fig:1S", "fig:1I"],
+      "source_figures": [
+        "Figs_1/ISE_3Dplot_N=16_p=0.5_theta=0.79.jpg",
+        "Figs_1/ISEplat_T=48_N=16_p=0.5_theta=0.79.jpg"
+      ],
+      "replacement_type": "run_params_json",
+      "replacement_path": "run_params/qdsummary_replacements/replace_figs_1S_1I_p050_theta_pi4.json",
+      "run_command": "python pySL.py --params qdsummary_replacements/replace_figs_1S_1I_p050_theta_pi4.json",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand",
+        "psi_E_spec": "bias",
+        "psi_bias": 0.5,
+        "Mironowicz_theta": "pi/4",
+        "Mironowicz_alpha2": 0.0,
+        "H_EE_J": 0.0
+      },
+      "confidence": "high",
+      "notes": "p and theta are explicit in filename/caption. The old plateau filename used T=48; replacement uses the common T=30 quality target."
+    },
+    {
+      "labels": ["fig:S_theta0p0", "fig:I_theta0p0"],
+      "source_figures": [
+        "Figs_1/ISE_3Dplot_N=16_p=0.0_theta=0.00.jpg",
+        "Figs_1/ISEplat_T=32_N=16_p=0.0_theta=0.00.jpg"
+      ],
+      "replacement_type": "run_params_json",
+      "replacement_path": "run_params/qdsummary_replacements/replace_figs_S_theta0p0_I_theta0p0_p000_theta0.json",
+      "run_command": "python pySL.py --params qdsummary_replacements/replace_figs_S_theta0p0_I_theta0p0_p000_theta0.json",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand",
+        "psi_E_spec": "bias",
+        "psi_bias": 0.0,
+        "Mironowicz_theta": 0.0,
+        "Mironowicz_alpha2": 0.0,
+        "H_EE_J": 0.0
+      },
+      "confidence": "high",
+      "notes": "p and theta are explicit in filename/caption. The old plateau filename used T=32; replacement uses T=30."
+    },
+    {
+      "labels": ["fig:S_theta0p0_alpha", "fig:I_theta0p0_alpha"],
+      "source_figures": [
+        "Figs_1/ISE_3Dplot_N=16_p=0.5_theta=0.00_alpha.jpg",
+        "Figs_1/ISEplat_T=52_N=16_p=0.5_theta=0.00_alpha.jpg"
+      ],
+      "replacement_type": "run_params_json",
+      "replacement_path": "run_params/qdsummary_replacements/replace_figs_S_theta0p0_alpha_I_theta0p0_alpha_p050_theta0_alpha010.json",
+      "run_command": "python pySL.py --params qdsummary_replacements/replace_figs_S_theta0p0_alpha_I_theta0p0_alpha_p050_theta0_alpha010.json",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand",
+        "psi_E_spec": "bias",
+        "psi_bias": 0.5,
+        "Mironowicz_theta": 0.0,
+        "Mironowicz_alpha2": 0.1,
+        "H_EE_J": 0.0
+      },
+      "confidence": "medium",
+      "notes": "p and theta are explicit in filename. alpha2=0.1 is inferred from the surrounding alpha/self-field discussion rather than the filename."
+    },
+    {
+      "labels": ["fig:epsilon01"],
+      "source_figures": ["Figs_1/epsilon_01.png"],
+      "replacement_type": "run_params_json",
+      "replacement_path": "run_params/qdsummary_replacements/replace_fig_epsilon01_p000_theta0_eps010.json",
+      "run_command": "python pySL.py --params qdsummary_replacements/replace_fig_epsilon01_p000_theta0_eps010.json",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand_epsilon",
+        "psi_E_spec": "bias",
+        "psi_bias": 0.0,
+        "Mironowicz_theta": 0.0,
+        "Mironowicz_epsilon": 0.1,
+        "Mironowicz_alpha2": 0.0,
+        "H_EE_J": 0.0
+      },
+      "confidence": "high",
+      "notes": "The single-epsilon Hamiltonian and epsilon value are explicit in the surrounding text/caption."
+    },
+    {
+      "labels": ["fig:epsilon05"],
+      "source_figures": ["Figs_1/epsilon_05.png"],
+      "replacement_type": "run_params_json",
+      "replacement_path": "run_params/qdsummary_replacements/replace_fig_epsilon05_p000_theta0_eps050.json",
+      "run_command": "python pySL.py --params qdsummary_replacements/replace_fig_epsilon05_p000_theta0_eps050.json",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand_epsilon",
+        "psi_E_spec": "bias",
+        "psi_bias": 0.0,
+        "Mironowicz_theta": 0.0,
+        "Mironowicz_epsilon": 0.5,
+        "Mironowicz_alpha2": 0.0,
+        "H_EE_J": 0.0
+      },
+      "confidence": "high",
+      "notes": "The single-epsilon Hamiltonian and epsilon value are explicit in the surrounding text/caption."
+    },
+    {
+      "labels": ["fig:EE_lowTime", "fig:EE_hiTime"],
+      "source_figures": [
+        "Figs_1/EE_lowTIme.png",
+        "Figs_1/EE_hiTime.png"
+      ],
+      "replacement_type": "run_params_json",
+      "replacement_path": "run_params/qdsummary_replacements/replace_figs_EE_lowTime_EE_hiTime_weak_ZZ_EE.json",
+      "run_command": "python pySL.py --params qdsummary_replacements/replace_figs_EE_lowTime_EE_hiTime_weak_ZZ_EE.json",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand_EE",
+        "psi_E_spec": "bias",
+        "psi_bias": 0.5,
+        "Mironowicz_theta": "pi/4",
+        "Mironowicz_alpha2": 0.0,
+        "H_EE_J": 0.025,
+        "H_EE_p": "Norm"
+      },
+      "confidence": "low",
+      "notes": "The caption/text only says weak Gaussian random nearest-neighbor ZZ E-E interaction. p=0.5, theta=pi/4, and H_EE_J=0.025 are inferred from the nearby baseline/default setup."
+    },
+    {
+      "labels": ["fig:Epsi1QD"],
+      "source_figures": ["Figs_1/Epsilon1Detail.png"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_Epsi1QD_epsilon1_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_Epsi1QD_epsilon1_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_Epsi1QD_epsilon1_sweep",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand_mod_epsilon",
+        "sweep": {"Mironowicz_epsilon": "linspace(0, 0.5, 21)"},
+        "fixed": {"Mironowicz_epsilon2": 0.0, "psi_bias": 0.0, "Mironowicz_theta": 0.0}
+      },
+      "confidence": "medium",
+      "notes": "Axis range comes from the figure. The p/theta baseline is inferred from the section's high-QD p=0, theta=0 setup."
+    },
+    {
+      "labels": ["fig:Epsi2QD"],
+      "source_figures": ["Figs_1/Epsilon2Detail.png"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_Epsi2QD_epsilon2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_Epsi2QD_epsilon2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_Epsi2QD_epsilon2_sweep",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand_mod_epsilon",
+        "sweep": {"Mironowicz_epsilon2": "linspace(0, 0.5, 21)"},
+        "fixed": {"Mironowicz_epsilon": 0.0, "psi_bias": 0.0, "Mironowicz_theta": 0.0}
+      },
+      "confidence": "medium",
+      "notes": "Axis range comes from the figure. The p/theta baseline is inferred from the section's high-QD p=0, theta=0 setup."
+    },
+    {
+      "labels": ["fig:Stab_pi4", "fig:analytic_stability_pi4"],
+      "source_figures": [
+        "Figs_1/Stability_pi4.png",
+        "Figs_1/Analytic_Stability_pi4.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_Stab_pi4_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_Stab_pi4_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_Stab_pi4_p_alpha2_sweep",
+      "quality_param_overrides": {"dT": "1/1050"},
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand",
+        "Mironowicz_theta": "pi/4",
+        "sweep": {"psi_bias": "linspace(0, 0.5, 20)", "Mironowicz_alpha2": "linspace(0, 3, 20)"}
+      },
+      "confidence": "high",
+      "notes": "The analytic B_F figure is derived from the same parameter grid, not directly from pySL output. The V2 timestep was selected by the nE=17 exact-state and MI/Holevo/discord convergence study."
+    },
+    {
+      "labels": ["fig:Stab_pi8", "fig:analytic_stability_pi8"],
+      "source_figures": [
+        "Figs_1/Stability_pi8.png",
+        "Figs_1/Analytic_Stability_pi8.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_Stab_pi8_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_Stab_pi8_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_Stab_pi8_p_alpha2_sweep",
+      "quality_param_overrides": {"dT": "1/1200"},
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand",
+        "Mironowicz_theta": "pi/8",
+        "sweep": {"psi_bias": "linspace(0, 0.5, 20)", "Mironowicz_alpha2": "linspace(0, 3, 20)"}
+      },
+      "confidence": "high",
+      "notes": "The analytic B_F figure is derived from the same parameter grid, not directly from pySL output. The V2 timestep was selected by the nE=17 exact-state and MI/Holevo/discord convergence study."
+    },
+    {
+      "labels": ["fig:Stab_pi0", "fig:analytic_stability_pi0"],
+      "source_figures": [
+        "Figs_1/Stability_pi0.png",
+        "Figs_1/Analytic_Stability_pi0.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_Stab_pi0_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_Stab_pi0_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_Stab_pi0_p_alpha2_sweep",
+      "quality_param_overrides": {"dT": 0.0005},
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand",
+        "Mironowicz_theta": 0.0,
+        "sweep": {"psi_bias": "linspace(0, 0.5, 20)", "Mironowicz_alpha2": "linspace(0, 3, 20)"}
+      },
+      "confidence": "high",
+      "notes": "The analytic B_F figure is derived from the same parameter grid, not directly from pySL output. The V2 timestep was selected by the nE=17 exact-state and MI/Holevo/discord convergence study."
+    },
+    {
+      "labels": ["fig:StabDet_pi8", "fig:analytic_detail_pi8"],
+      "source_figures": [
+        "Figs_1/DetailSweep2Pi8.png",
+        "Figs_1/Analytic_DetailSweep2Pi8.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_StabDet_pi8_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_StabDet_pi8_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_StabDet_pi8_p_alpha2_sweep",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand",
+        "Mironowicz_theta": "pi/8",
+        "sweep": {"psi_bias": "linspace(0.22, 0.56, 20)", "Mironowicz_alpha2": "linspace(0, 0.05, 20)"}
+      },
+      "confidence": "high",
+      "notes": "Axis windows come from the zoomed detail plot."
+    },
+    {
+      "labels": ["fig:StabDet_pi0", "fig:analytic_detail_pi0"],
+      "source_figures": [
+        "Figs_1/DetailSweep2Pi0.png",
+        "Figs_1/Analytic_DetailSweep2Pi0.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_StabDet_pi0_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_StabDet_pi0_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_StabDet_pi0_p_alpha2_sweep",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand",
+        "Mironowicz_theta": 0.0,
+        "sweep": {"psi_bias": "linspace(0.22, 0.56, 20)", "Mironowicz_alpha2": "linspace(0, 0.05, 20)"}
+      },
+      "confidence": "high",
+      "notes": "Axis windows come from the zoomed detail plot."
+    },
+    {
+      "labels": ["fig:thetaSweep", "fig:analytic_theta_sweep"],
+      "source_figures": [
+        "Figs_1/ThetaSweep.png",
+        "Figs_1/Analytic_ThetaSweep.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_thetaSweep_theta_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_thetaSweep_theta_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_thetaSweep_theta_alpha2_sweep",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand",
+        "psi_bias": 0.5,
+        "sweep": {"Mironowicz_theta": "linspace(0, pi/2, 20)", "Mironowicz_alpha2": "linspace(0, 0.07, 20)"}
+      },
+      "confidence": "low",
+      "notes": "The theta/alpha2 axes are visible in the figure; fixed psi_bias=0.5 is inferred from surrounding plots and should be checked against any old run metadata if available."
+    },
+    {
+      "labels": ["fig:ZZ_to_ZX_epsilon_alpha2_sweep"],
+      "source_figures": ["Figs_sweeps/Mironowicz_ZZ_to_ZX_rand_epsilon_alpha2_sweep/qd_slope_2D_x-Mironowicz_ZZ_to_ZX_epsilon_y-Mironowicz_alpha2_N-14_T--1.jpg"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_ZZ_to_ZX_epsilon_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_ZZ_to_ZX_epsilon_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_ZZ_to_ZX_epsilon_alpha2_sweep",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand_EE_ZZ_to_ZX",
+        "psi_E_spec": "rand",
+        "H_EE_J": 0.5,
+        "H_EE_p": "Const",
+        "store_correlators": true,
+        "sweep": {"Mironowicz_ZZ_to_ZX_epsilon": "linspace(pi/2 - 0.1, pi/2 + 0.1, 20)", "Mironowicz_alpha2": "linspace(0, 3, 20)"}
+      },
+      "confidence": "high",
+      "notes": "This follows the existing pySL batch config and the figure caption, with only the common quality parameters changed."
+    },
+    {
+      "labels": ["fig:ZX_alpha2_HEE_sweep"],
+      "source_figures": ["Figs_sweeps/Mironowicz_transverse_alpha2_HEE_sweep/qd_slope_2D_x-H_EE_J_y-Mironowicz_alpha2_N-14_T--1.jpg"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_ZX_alpha2_HEE_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_ZX_alpha2_HEE_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_ZX_alpha2_HEE_sweep",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand_EE_ZX",
+        "psi_E_spec": "rand",
+        "Mironowicz_theta": 0.0,
+        "H_EE_p": "Const",
+        "store_correlators": true,
+        "sweep": {"H_EE_J": "linspace(0, 1, 20)", "Mironowicz_alpha2": "linspace(0, 3.5, 20)"}
+      },
+      "confidence": "high",
+      "notes": "The archived source batch used the composite Mironowicz_rand_EE_transverse model, but the LaTeX claim requires a pure ZX control. This replacement intentionally uses Mironowicz_rand_EE_ZX and a distinct output subdirectory."
+    },
+    {
+      "labels": ["fig:MBL2_RawZ"],
+      "source_figures": ["Figs_MBL/MBL2_RawZ.png"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_MBL2_transverse_HEE_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_MBL2_transverse_HEE_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_MBL2_transverse_HEE_alpha2_sweep",
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand_EE_transverse",
+        "psi_E_spec": "bias",
+        "psi_bias": 0.25,
+        "Mironowicz_theta": "pi/2",
+        "H_EE_p": "Const",
+        "store_correlators": true,
+        "T": 30,
+        "printT": 1,
+        "analysis": {"Tsample": -1, "setMinTime": 10},
+        "sweep": {"H_EE_J": "linspace(0, 1, 20)", "Mironowicz_alpha2": "linspace(0, 3.5, 20)"}
+      },
+      "confidence": "medium",
+      "notes": "Hamiltonian and axes follow the cleaned LaTeX interpretation plus old MBL configs. This is the non-long-time replacement and retains the common T=30 quality target."
+    },
+    {
+      "labels": ["fig:MBL3_lt_RawZ"],
+      "source_figures": ["Figs_MBL/ISE_2Dplot_MBL_N=16 T=500.jpg"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_MBL3_longtime_transverse_HEE_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_MBL3_longtime_transverse_HEE_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_MBL3_longtime_transverse_HEE_alpha2_sweep",
+      "quality_param_overrides": {
+        "AverageOverRunsN": 1,
+        "T": 500,
+        "printT": 250,
+        "store_correlators": true
+      },
+      "inferred_params": {
+        "H_SE_Special": "Mironowicz_rand_EE_transverse",
+        "psi_E_spec": "bias",
+        "psi_bias": 0.25,
+        "Mironowicz_theta": "pi/2",
+        "H_EE_p": "Const",
+        "store_correlators": true,
+        "AverageOverRunsN": 1,
+        "T": 500,
+        "printT": 250,
+        "analysis": {"Tsample": 500, "setMinTime": 20},
+        "sweep": {"H_EE_J": "linspace(0, 1, 20)", "Mironowicz_alpha2": "linspace(0, 3.5, 20)"}
+      },
+      "confidence": "medium",
+      "notes": "This is the long-time replacement for Fig. 35. The source filename encodes T=500 and the caption says long times up to about 510. It records t=0, 250, and 500 and uses one deterministic realization to control the long-run cost."
+    }
+  ]
+}

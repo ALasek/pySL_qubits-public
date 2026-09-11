@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-06-30",
+  "purpose": "Focused rerun plan for QD_summary figures still affected by the old correlated Mironowicz random g_j/h_j draws. A figure is included when it has not already been replaced in QD_summary/Figs_replace and its source model sweeps or uses nonzero Mironowicz_alpha2.",
+  "source_manifest": "qdsummary_replacements/plot_rebuild_manifest.json",
+  "selection_rule": {
+    "include": [
+      "replacement_type == batch_config",
+      "not already copied into QD_summary/Figs_replace",
+      "source or replacement grid uses nonzero/swept Mironowicz_alpha2"
+    ],
+    "exclude": [
+      "single-run replacements already copied into QD_summary/Figs_replace",
+      "epsilon-only replacements with Mironowicz_alpha2 fixed to 0",
+      "bias theta/alpha2 sweeps already regenerated in the randfix folders"
+    ]
+  },
+  "runner": {
+    "script": "scripts/run_qdsummary_remaining_bad_replacements.py",
+    "default_command": "python scripts/run_qdsummary_remaining_bad_replacements.py",
+    "dry_run_command": "python scripts/run_qdsummary_remaining_bad_replacements.py --dry-run",
+    "figures_only_command": "python scripts/run_qdsummary_remaining_bad_replacements.py --figures-only",
+    "notes": "This delegates to scripts/run_qdsummary_replacements.py with this focused manifest. Batch jobs run sequentially; each batch uses --workers 4 by default."
+  },
+  "excluded_already_replaced": [
+    {
+      "labels": ["fig:1S", "fig:1I"],
+      "reason": "Already copied into QD_summary/Figs_replace; alpha2 fixed to 0."
+    },
+    {
+      "labels": ["fig:S_theta0p0", "fig:I_theta0p0"],
+      "reason": "Already copied into QD_summary/Figs_replace; alpha2 fixed to 0."
+    },
+    {
+      "labels": ["fig:S_theta0p0_alpha", "fig:I_theta0p0_alpha"],
+      "reason": "Already copied into QD_summary/Figs_replace."
+    },
+    {
+      "labels": ["fig:bias035_theta_alpha2_sweep"],
+      "reason": "Already replaced by Mironowicz_rand_bias035_theta_alpha2_sweep_randfix_LT."
+    },
+    {
+      "labels": ["fig:epsilon01", "fig:epsilon05"],
+      "reason": "Already copied into QD_summary/Figs_replace; alpha2 fixed to 0."
+    },
+    {
+      "labels": ["fig:EE_lowTime", "fig:EE_hiTime"],
+      "reason": "Already copied into QD_summary/Figs_replace; alpha2 fixed to 0."
+    },
+    {
+      "labels": [
+        "fig:bias010_theta_alpha2_distinguishability",
+        "fig:bias020_theta_alpha2_distinguishability",
+        "fig:bias030_theta_alpha2_distinguishability",
+        "fig:bias040_theta_alpha2_distinguishability"
+      ],
+      "reason": "Already replaced by the randfix bias-series sweep exports."
+    }
+  ],
+  "excluded_not_alpha2_bug": [
+    {
+      "labels": ["fig:Epsi1QD"],
+      "replacement_path": "batch_configs/qdsummary_replace_fig_Epsi1QD_epsilon1_sweep.py",
+      "reason": "Mironowicz_alpha2 is fixed to 0; this epsilon-only sweep is not affected by the g_j/h_j correlation bug."
+    },
+    {
+      "labels": ["fig:Epsi2QD"],
+      "replacement_path": "batch_configs/qdsummary_replace_fig_Epsi2QD_epsilon2_sweep.py",
+      "reason": "Mironowicz_alpha2 is fixed to 0; this epsilon-only sweep is not affected by the g_j/h_j correlation bug."
+    }
+  ],
+  "replacements": [
+    {
+      "labels": ["fig:Stab_pi4", "fig:analytic_stability_pi4"],
+      "source_figures": [
+        "Figs_1/Stability_pi4.png",
+        "Figs_1/Analytic_Stability_pi4.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_Stab_pi4_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_Stab_pi4_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_Stab_pi4_p_alpha2_sweep",
+      "notes": "Reruns the theta=pi/4 p/alpha2 stability sweep in the V2 output subdir with dT=1/1050, selected by the nE=17 convergence study."
+    },
+    {
+      "labels": ["fig:Stab_pi8", "fig:analytic_stability_pi8"],
+      "source_figures": [
+        "Figs_1/Stability_pi8.png",
+        "Figs_1/Analytic_Stability_pi8.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_Stab_pi8_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_Stab_pi8_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_Stab_pi8_p_alpha2_sweep",
+      "notes": "Reruns the theta=pi/8 p/alpha2 stability sweep in the V2 output subdir with dT=1/1200, selected by the nE=17 convergence study."
+    },
+    {
+      "labels": ["fig:Stab_pi0", "fig:analytic_stability_pi0"],
+      "source_figures": [
+        "Figs_1/Stability_pi0.png",
+        "Figs_1/Analytic_Stability_pi0.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_Stab_pi0_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_Stab_pi0_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_Stab_pi0_p_alpha2_sweep",
+      "notes": "Reruns the theta=0 p/alpha2 stability sweep in the V2 output subdir with dT=0.0005, selected by the nE=17 convergence study."
+    },
+    {
+      "labels": ["fig:StabDet_pi8", "fig:analytic_detail_pi8"],
+      "source_figures": [
+        "Figs_1/DetailSweep2Pi8.png",
+        "Figs_1/Analytic_DetailSweep2Pi8.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_StabDet_pi8_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_StabDet_pi8_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_StabDet_pi8_p_alpha2_sweep",
+      "notes": "Reruns the theta=pi/8 zoomed p/alpha2 detail sweep."
+    },
+    {
+      "labels": ["fig:StabDet_pi0", "fig:analytic_detail_pi0"],
+      "source_figures": [
+        "Figs_1/DetailSweep2Pi0.png",
+        "Figs_1/Analytic_DetailSweep2Pi0.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_StabDet_pi0_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_StabDet_pi0_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_StabDet_pi0_p_alpha2_sweep",
+      "notes": "Reruns the theta=0 zoomed p/alpha2 detail sweep."
+    },
+    {
+      "labels": ["fig:thetaSweep", "fig:analytic_theta_sweep"],
+      "source_figures": [
+        "Figs_1/ThetaSweep.png",
+        "Figs_1/Analytic_ThetaSweep.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_thetaSweep_theta_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_thetaSweep_theta_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_thetaSweep_theta_alpha2_sweep",
+      "notes": "Reruns the theta/alpha2 sweep at fixed inferred bias."
+    },
+    {
+      "labels": ["fig:ZZ_to_ZX_epsilon_alpha2_sweep"],
+      "source_figures": [
+        "Figs_sweeps/Mironowicz_ZZ_to_ZX_rand_epsilon_alpha2_sweep/qd_slope_2D_x-Mironowicz_ZZ_to_ZX_epsilon_y-Mironowicz_alpha2_N-14_T--1.jpg"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_ZZ_to_ZX_epsilon_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_ZZ_to_ZX_epsilon_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_ZZ_to_ZX_epsilon_alpha2_sweep",
+      "notes": "Reruns the near-ZX epsilon/alpha2 E-E sweep with store_correlators enabled."
+    },
+    {
+      "labels": ["fig:ZX_alpha2_HEE_sweep"],
+      "source_figures": [
+        "Figs_sweeps/Mironowicz_transverse_alpha2_HEE_sweep/qd_slope_2D_x-H_EE_J_y-Mironowicz_alpha2_N-14_T--1.jpg"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_ZX_alpha2_HEE_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_ZX_alpha2_HEE_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_ZX_alpha2_HEE_sweep",
+      "notes": "Reruns the pure Z-X E-E coupling strength/alpha2 control with store_correlators enabled."
+    },
+    {
+      "labels": ["fig:MBL2_RawZ"],
+      "source_figures": ["Figs_MBL/MBL2_RawZ.png"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_MBL2_transverse_HEE_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_MBL2_transverse_HEE_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_MBL2_transverse_HEE_alpha2_sweep",
+      "notes": "Reruns the intermediate-time transverse E-E MBL/stability sweep with store_correlators enabled."
+    },
+    {
+      "labels": ["fig:MBL3_lt_RawZ"],
+      "source_figures": ["Figs_MBL/ISE_2Dplot_MBL_N=16 T=500.jpg"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_MBL3_longtime_transverse_HEE_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_MBL3_longtime_transverse_HEE_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_MBL3_longtime_transverse_HEE_alpha2_sweep",
+      "notes": "Reruns the long-time transverse E-E MBL/stability sweep with T=500, printT=250, AverageOverRunsN=1, and store_correlators enabled."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "python": "3.11.9",
+  "isolated_reproduction": "passed",
+  "pixel_comparison_dpi": 72,
+  "pixel_identical_figures": [
+    "aligned_field_profiles.pdf",
+    "fragment_scaling.pdf",
+    "fragment_threshold_scaling.pdf",
+    "holevo_plateau_overview.pdf",
+    "matched_lambda_fragment_sweep.pdf",
+    "pointer_basis_expanded.pdf",
+    "stability_theta_pi4.pdf",
+    "supplement\\field_mean_width_comparison.pdf",
+    "supplement\\higher_n_validation.pdf",
+    "supplement\\matched_lambda_records.pdf",
+    "supplement\\stability_endpoints_compact.pdf",
+    "supplement\\threshold_percentile_comparison.pdf"
+  ],
+  "cpu_analysis_tests": "5 passed",
+  "simulator_tests": "23 passed",
+  "gpu_runs": "not launched; batch dry runs only"
+}

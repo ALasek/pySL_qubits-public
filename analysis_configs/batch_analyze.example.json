@@ -1,0 +1,11 @@
+{
+  "config": null,
+  "subdir": "Mironowicz_MBL_Sweep2_lt",
+  "x": null,
+  "y": null,
+  "Tsample": 500,
+  "setMinTime": 20,
+  "redundancyminfraction": 0.4,
+  "plotData": false,
+  "dataOld": false
+}

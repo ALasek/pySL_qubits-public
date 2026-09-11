@@ -1,0 +1,1440 @@
+{
+  "time": 36,
+  "threshold": 0.9,
+  "quantile": 0.1,
+  "bootstrap_draws": 2000,
+  "seed": 20260907,
+  "order": "Within each realization: fragment q10, first threshold m; average paired geometries within realization, then average defined threshold sizes. No inversion of mean redundancy.",
+  "noncrossings": "Undefined for no crossing among m<=N/2; reported conditional means exclude these realizations and display counts.",
+  "intervals": "Realization-only percentile bootstrap of exact threshold sizes; paired geometries stay together; sampled fragments held fixed.",
+  "panel_a_source": "figures\\paper_a\\source_manifests\\fragment_threshold_scaling.csv",
+  "panel_a_sha256": "9d0f5efbbd94bbd75fc5efbe904dead49b3d46282084cd9dd2b05854bacd190a",
+  "script_sha256": "dedc05cd4b4c8b9e9cfeb4d3ffde2b31db2a51f92f130383f38bedb0d91de5b0",
+  "exact_helper_sha256": "7cd00b4360774f8978ed80894b2803dc44a3984128378ef854f71a01e9cfbfa9",
+  "iid_references": {
+    "0.75": 7.0,
+    "0.933012702": 5.0,
+    "1.0": 5.0
+  },
+  "groups": [
+    {
+      "n_environment": 8,
+      "lambda": 0.75,
+      "geometry_count": 6,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 3.8,
+        "low": 3.4,
+        "high": 4.0,
+        "defined": 5,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        null,
+        null,
+        4.0,
+        4.0,
+        null,
+        4.0,
+        null,
+        null,
+        4.0,
+        null,
+        null,
+        3.0
+      ],
+      "exact": {
+        "mean": 3.8,
+        "low": 3.4,
+        "high": 4.0,
+        "defined": 5,
+        "total": 12
+      },
+      "exact_per_realization": [
+        null,
+        null,
+        4.0,
+        4.0,
+        null,
+        4.0,
+        null,
+        null,
+        4.0,
+        null,
+        null,
+        3.0
+      ]
+    },
+    {
+      "n_environment": 8,
+      "lambda": 0.933012702,
+      "geometry_count": 4,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 3.8181818181818183,
+        "low": 3.5454545454545454,
+        "high": 4.0,
+        "defined": 11,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        4.0,
+        null,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        3.0
+      ],
+      "exact": {
+        "mean": 3.8181818181818183,
+        "low": 3.5454545454545454,
+        "high": 4.0,
+        "defined": 11,
+        "total": 12
+      },
+      "exact_per_realization": [
+        4.0,
+        null,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        3.0
+      ]
+    },
+    {
+      "n_environment": 8,
+      "lambda": 1.0,
+      "geometry_count": 5,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 3.6363636363636362,
+        "low": 3.1818181818181817,
+        "high": 4.0,
+        "defined": 11,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        4.0,
+        null,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        2.0
+      ],
+      "exact": {
+        "mean": 3.6363636363636362,
+        "low": 3.1818181818181817,
+        "high": 4.0,
+        "defined": 11,
+        "total": 12
+      },
+      "exact_per_realization": [
+        4.0,
+        null,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        2.0
+      ]
+    },
+    {
+      "n_environment": 10,
+      "lambda": 0.75,
+      "geometry_count": 1,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 4.571428571428571,
+        "low": 4.142857142857143,
+        "high": 4.857142857142857,
+        "defined": 7,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        null,
+        null,
+        4.0,
+        5.0,
+        null,
+        5.0,
+        5.0,
+        null,
+        5.0,
+        null,
+        4.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 4.571428571428571,
+        "low": 4.285714285714286,
+        "high": 4.860714285714266,
+        "defined": 7,
+        "total": 12
+      },
+      "exact_per_realization": [
+        null,
+        null,
+        4.0,
+        5.0,
+        null,
+        5.0,
+        5.0,
+        null,
+        5.0,
+        null,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 10,
+      "lambda": 0.933012702,
+      "geometry_count": 1,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 4.2,
+        "low": 3.8,
+        "high": 4.6,
+        "defined": 10,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        4.0,
+        5.0,
+        3.0,
+        5.0,
+        null,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        null,
+        4.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 4.2,
+        "low": 3.8,
+        "high": 4.6,
+        "defined": 10,
+        "total": 12
+      },
+      "exact_per_realization": [
+        4.0,
+        5.0,
+        3.0,
+        5.0,
+        null,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        null,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 10,
+      "lambda": 1.0,
+      "geometry_count": 1,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 3.9,
+        "low": 3.5,
+        "high": 4.4,
+        "defined": 10,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        4.0,
+        5.0,
+        3.0,
+        4.0,
+        null,
+        3.0,
+        4.0,
+        5.0,
+        4.0,
+        null,
+        4.0,
+        3.0
+      ],
+      "exact": {
+        "mean": 3.9,
+        "low": 3.5,
+        "high": 4.3,
+        "defined": 10,
+        "total": 12
+      },
+      "exact_per_realization": [
+        4.0,
+        5.0,
+        3.0,
+        4.0,
+        null,
+        3.0,
+        4.0,
+        5.0,
+        4.0,
+        null,
+        4.0,
+        3.0
+      ]
+    },
+    {
+      "n_environment": 12,
+      "lambda": 0.75,
+      "geometry_count": 6,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 5.2,
+        "low": 4.7,
+        "high": 5.6,
+        "defined": 10,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        null,
+        5.0,
+        4.0,
+        5.0,
+        null,
+        5.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        4.0,
+        5.0
+      ],
+      "exact": {
+        "mean": 5.2,
+        "low": 4.7,
+        "high": 5.6,
+        "defined": 10,
+        "total": 12
+      },
+      "exact_per_realization": [
+        null,
+        5.0,
+        4.0,
+        5.0,
+        null,
+        5.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        4.0,
+        5.0
+      ]
+    },
+    {
+      "n_environment": 12,
+      "lambda": 0.933012702,
+      "geometry_count": 4,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 4.75,
+        "low": 4.333333333333333,
+        "high": 5.166666666666667,
+        "defined": 12,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        6.0,
+        5.0,
+        4.0,
+        5.0,
+        6.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 4.75,
+        "low": 4.333333333333333,
+        "high": 5.166666666666667,
+        "defined": 12,
+        "total": 12
+      },
+      "exact_per_realization": [
+        6.0,
+        5.0,
+        4.0,
+        5.0,
+        6.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 12,
+      "lambda": 1.0,
+      "geometry_count": 5,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 4.25,
+        "low": 3.8333333333333335,
+        "high": 4.75,
+        "defined": 12,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        5.0,
+        4.0,
+        3.0,
+        5.0,
+        6.0,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 4.25,
+        "low": 3.8333333333333335,
+        "high": 4.75,
+        "defined": 12,
+        "total": 12
+      },
+      "exact_per_realization": [
+        5.0,
+        4.0,
+        3.0,
+        5.0,
+        6.0,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 14,
+      "lambda": 0.75,
+      "geometry_count": 1,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 5.454545454545454,
+        "low": 4.909090909090909,
+        "high": 6.0,
+        "defined": 11,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        7.0,
+        6.0,
+        5.0,
+        5.0,
+        null,
+        6.0,
+        5.0,
+        6.0,
+        6.0,
+        6.0,
+        4.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 5.454545454545454,
+        "low": 4.909090909090909,
+        "high": 5.911363636363624,
+        "defined": 11,
+        "total": 12
+      },
+      "exact_per_realization": [
+        7.0,
+        6.0,
+        5.0,
+        5.0,
+        null,
+        6.0,
+        5.0,
+        6.0,
+        6.0,
+        6.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 14,
+      "lambda": 0.933012702,
+      "geometry_count": 1,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 4.416666666666667,
+        "low": 3.8333333333333335,
+        "high": 4.916666666666667,
+        "defined": 12,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        6.0,
+        5.0,
+        4.0,
+        3.0,
+        4.0,
+        6.0,
+        3.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 4.416666666666667,
+        "low": 3.9166666666666665,
+        "high": 5.0,
+        "defined": 12,
+        "total": 12
+      },
+      "exact_per_realization": [
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        6.0,
+        5.0,
+        4.0,
+        3.0,
+        4.0,
+        6.0,
+        3.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 14,
+      "lambda": 1.0,
+      "geometry_count": 1,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 4.0,
+        "low": 3.5833333333333335,
+        "high": 4.5,
+        "defined": 12,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        6.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        5.0,
+        3.0,
+        3.0
+      ],
+      "exact": {
+        "mean": 4.0,
+        "low": 3.5833333333333335,
+        "high": 4.418749999999989,
+        "defined": 12,
+        "total": 12
+      },
+      "exact_per_realization": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        6.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        5.0,
+        3.0,
+        3.0
+      ]
+    },
+    {
+      "n_environment": 16,
+      "lambda": 0.75,
+      "geometry_count": 6,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 5.666666666666667,
+        "low": 5.083333333333333,
+        "high": 6.25,
+        "defined": 12,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        6.0,
+        5.0,
+        5.0,
+        5.0,
+        7.0,
+        6.0,
+        6.0,
+        6.0,
+        7.0,
+        7.0,
+        4.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 5.666666666666667,
+        "low": 5.083333333333333,
+        "high": 6.25,
+        "defined": 12,
+        "total": 12
+      },
+      "exact_per_realization": [
+        6.0,
+        5.0,
+        5.0,
+        5.0,
+        7.0,
+        6.0,
+        6.0,
+        6.0,
+        7.0,
+        7.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 16,
+      "lambda": 0.933012702,
+      "geometry_count": 4,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 4.916666666666667,
+        "low": 4.583333333333333,
+        "high": 5.25,
+        "defined": 12,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        5.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        6.0,
+        5.0,
+        5.0,
+        6.0,
+        4.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 4.916666666666667,
+        "low": 4.583333333333333,
+        "high": 5.25,
+        "defined": 12,
+        "total": 12
+      },
+      "exact_per_realization": [
+        5.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        6.0,
+        5.0,
+        5.0,
+        6.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 16,
+      "lambda": 1.0,
+      "geometry_count": 5,
+      "fragment_cap": 32,
+      "numerical": {
+        "mean": 4.333333333333333,
+        "low": 3.8333333333333335,
+        "high": 4.833333333333333,
+        "defined": 12,
+        "total": 12
+      },
+      "numerical_per_realization": [
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        6.0,
+        3.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 4.333333333333333,
+        "low": 3.8333333333333335,
+        "high": 4.833333333333333,
+        "defined": 12,
+        "total": 12
+      },
+      "exact_per_realization": [
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        6.0,
+        3.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 20,
+      "lambda": 0.75,
+      "geometry_count": 1,
+      "fragment_cap": 64,
+      "numerical": {
+        "mean": 6.25,
+        "low": 6.0,
+        "high": 6.625,
+        "defined": 8,
+        "total": 8
+      },
+      "numerical_per_realization": [
+        7.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        7.0,
+        6.0,
+        6.0
+      ],
+      "exact": {
+        "mean": 6.25,
+        "low": 6.0,
+        "high": 6.625,
+        "defined": 8,
+        "total": 8
+      },
+      "exact_per_realization": [
+        7.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        7.0,
+        6.0,
+        6.0
+      ]
+    },
+    {
+      "n_environment": 20,
+      "lambda": 0.933012702,
+      "geometry_count": 1,
+      "fragment_cap": 64,
+      "numerical": {
+        "mean": 4.75,
+        "low": 4.375,
+        "high": 5.0,
+        "defined": 8,
+        "total": 8
+      },
+      "numerical_per_realization": [
+        5.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 4.75,
+        "low": 4.375,
+        "high": 5.0,
+        "defined": 8,
+        "total": 8
+      },
+      "exact_per_realization": [
+        5.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 20,
+      "lambda": 1.0,
+      "geometry_count": 1,
+      "fragment_cap": 64,
+      "numerical": {
+        "mean": 4.5,
+        "low": 4.125,
+        "high": 4.875,
+        "defined": 8,
+        "total": 8
+      },
+      "numerical_per_realization": [
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 4.5,
+        "low": 4.125,
+        "high": 4.875,
+        "defined": 8,
+        "total": 8
+      },
+      "exact_per_realization": [
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 24,
+      "lambda": 0.75,
+      "geometry_count": 1,
+      "fragment_cap": 64,
+      "numerical": {
+        "mean": 6.0,
+        "low": 5.625,
+        "high": 6.375,
+        "defined": 8,
+        "total": 8
+      },
+      "numerical_per_realization": [
+        6.0,
+        6.0,
+        6.0,
+        5.0,
+        6.0,
+        7.0,
+        6.0,
+        6.0
+      ],
+      "exact": {
+        "mean": 6.0,
+        "low": 5.625,
+        "high": 6.375,
+        "defined": 8,
+        "total": 8
+      },
+      "exact_per_realization": [
+        6.0,
+        6.0,
+        6.0,
+        5.0,
+        6.0,
+        7.0,
+        6.0,
+        6.0
+      ]
+    },
+    {
+      "n_environment": 24,
+      "lambda": 0.933012702,
+      "geometry_count": 1,
+      "fragment_cap": 64,
+      "numerical": {
+        "mean": 4.625,
+        "low": 4.125,
+        "high": 5.125,
+        "defined": 8,
+        "total": 8
+      },
+      "numerical_per_realization": [
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        6.0,
+        5.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 4.625,
+        "low": 4.25,
+        "high": 5.125,
+        "defined": 8,
+        "total": 8
+      },
+      "exact_per_realization": [
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        6.0,
+        5.0,
+        4.0
+      ]
+    },
+    {
+      "n_environment": 24,
+      "lambda": 1.0,
+      "geometry_count": 1,
+      "fragment_cap": 64,
+      "numerical": {
+        "mean": 4.5,
+        "low": 4.125,
+        "high": 4.875,
+        "defined": 8,
+        "total": 8
+      },
+      "numerical_per_realization": [
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0
+      ],
+      "exact": {
+        "mean": 4.5,
+        "low": 4.125,
+        "high": 4.875,
+        "defined": 8,
+        "total": 8
+      },
+      "exact_per_realization": [
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "run_id": "393eadd8d02f0ea40011551efc5c2b97c5ced5554f5f9f7b1c92ada865870eb3",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\393eadd8d02f0ea40011551efc5c2b97c5ced5554f5f9f7b1c92ada865870eb3",
+      "max_q10_difference_bits": 0.0035275972955376156,
+      "membership": "seed_reconstruction",
+      "params_sha256": "c44a7652fc836e8468b92cd10bcc371b8bf1d9fdf673909105e324596fab66df",
+      "results_sha256": "cd2003d935cdef142d8b6ea953ca6875a2162b5a81afd2ace37f484b35af811c"
+    },
+    {
+      "run_id": "6254723a0fcc847a3e2210efc687e66f48b2c2d53f7c5ca8594dc263cfa29d6c",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\6254723a0fcc847a3e2210efc687e66f48b2c2d53f7c5ca8594dc263cfa29d6c",
+      "max_q10_difference_bits": 0.0035267988066159106,
+      "membership": "seed_reconstruction",
+      "params_sha256": "b40afcc2df58d1a43e8c78197afe9887c3066e761bed70559614e14e544f5143",
+      "results_sha256": "44749bd07524557a574cae89e165c5d2f909d923eace928e60f50d25e6d02b36"
+    },
+    {
+      "run_id": "69d1f053965007d507efc9084900bda37526ba2d170768c7bdb83bfe7ee7d293",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\69d1f053965007d507efc9084900bda37526ba2d170768c7bdb83bfe7ee7d293",
+      "max_q10_difference_bits": 0.003527326422920113,
+      "membership": "seed_reconstruction",
+      "params_sha256": "9d106b8f6f666cbea03bbf979f61a8544e61fd89630c3ca33bd2f0e647042743",
+      "results_sha256": "d82e066e09f6c3434b2b3232f00a0004449b1e462a395962f0db2a9af617eada"
+    },
+    {
+      "run_id": "8e231604f9e9505a3f8bca3d41e685eb6bd2794160cf7622d4e4c4ccfcffdb11",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\8e231604f9e9505a3f8bca3d41e685eb6bd2794160cf7622d4e4c4ccfcffdb11",
+      "max_q10_difference_bits": 0.003528979177930769,
+      "membership": "seed_reconstruction",
+      "params_sha256": "1592bb4a08a69f2379150073bce58ae4dcbbfb14b0c4ec0f33f7ff4dfa76cf75",
+      "results_sha256": "d5b129c7dd7c90ea8839fcfdd0710bb6654dca9f31fb46271dc33169ca8ded94"
+    },
+    {
+      "run_id": "a8f2ba85a7906e03343ed6a2d6358ce8924df5246f403c6c22a6340471d4aade",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\a8f2ba85a7906e03343ed6a2d6358ce8924df5246f403c6c22a6340471d4aade",
+      "max_q10_difference_bits": 0.003528169137899939,
+      "membership": "seed_reconstruction",
+      "params_sha256": "cb1b1d4cd9c15964eb4e33eeec4cb9dfd449e3bd2dbd944d18d6609786d0928e",
+      "results_sha256": "e7c26b7d381c360e0a6a9af5a31524da9cbd22508bc10f514e9f54cd4e8982fb"
+    },
+    {
+      "run_id": "af2276866b0add8784094d4d3fe65073375a486045353a3c830d1889459d5b97",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\af2276866b0add8784094d4d3fe65073375a486045353a3c830d1889459d5b97",
+      "max_q10_difference_bits": 0.0035289817559346764,
+      "membership": "seed_reconstruction",
+      "params_sha256": "8408e5c53587e709e702850323882681c0588c421041ca4e4f2a87d1515a7eba",
+      "results_sha256": "82034bb993aa4d9ff041b9fa5712d9d9a56413b9540bf05cb072894233097298"
+    },
+    {
+      "run_id": "047665b0d0d72b1f092803b832d9fecf43a1a8135105fff81d563bec6aae3aed",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\047665b0d0d72b1f092803b832d9fecf43a1a8135105fff81d563bec6aae3aed",
+      "max_q10_difference_bits": 0.004269753881441241,
+      "membership": "seed_reconstruction",
+      "params_sha256": "834ba74fa77de56ada598b0e5b64a33350da1040590267668c37da0b91b858b3",
+      "results_sha256": "9469e57a14e28978494dc896850ffb45ff90e193074ce2e341325dab504b4ca9"
+    },
+    {
+      "run_id": "60a4d6547f0767516b9841aed7e3a444c95e2f6024e8c892498a6f325ec5d19b",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\60a4d6547f0767516b9841aed7e3a444c95e2f6024e8c892498a6f325ec5d19b",
+      "max_q10_difference_bits": 0.004269877061870597,
+      "membership": "seed_reconstruction",
+      "params_sha256": "7426c4421bf7335b8cc57ed4bdb9eb631de3bcf7a3ae43acb8131a1fa8a4f00d",
+      "results_sha256": "9fce525524edd9e6da209e6d42f6344c8841243f6d6db65a2a8dc5b37d4d7c43"
+    },
+    {
+      "run_id": "b6c4095f3f5df08858e28f315b42438f4a2a26ddd50cefb5fc27be91b75f4c65",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\b6c4095f3f5df08858e28f315b42438f4a2a26ddd50cefb5fc27be91b75f4c65",
+      "max_q10_difference_bits": 0.0042692450257656445,
+      "membership": "seed_reconstruction",
+      "params_sha256": "5c54543ebf176250bec6e806bb4a819068d499527b428ac39020b1bb825f0c93",
+      "results_sha256": "13b1d0c4aff1b2b48ef6e948170a0ba8e3052e3b1ba2456e05aa5ee751a17f08"
+    },
+    {
+      "run_id": "cd65b921d2e5380c8bb44616f4a25fb541e81ab46cd7a0c3e88c0449e1c2a97b",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\cd65b921d2e5380c8bb44616f4a25fb541e81ab46cd7a0c3e88c0449e1c2a97b",
+      "max_q10_difference_bits": 0.004268759845754422,
+      "membership": "seed_reconstruction",
+      "params_sha256": "73b1dd2d47937d5ac0a0e13bb37da8ae140c2cbb20fae0dd99c976a2862e8fcf",
+      "results_sha256": "c5ff9f72107a080cd6ee54da4e3fac3faa792a3d3f769e7e6fc217bbf40e5b42"
+    },
+    {
+      "run_id": "095050f4e8306bfca1365c408108c6154912b8ed934008216f1e959746808df5",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\095050f4e8306bfca1365c408108c6154912b8ed934008216f1e959746808df5",
+      "max_q10_difference_bits": 0.003219507817444029,
+      "membership": "seed_reconstruction",
+      "params_sha256": "2d359c79bfec4c149ed5bdf101fa30716c218666b1b9e841177b862f7dab45ac",
+      "results_sha256": "ae2cbef0750fa8b1e442ad6a13b8b87236cf23266bccc864cf29dcaebb0e34bb"
+    },
+    {
+      "run_id": "38478e30301421ef54894f53611d8f89f3f9dff6a7f84f4aecec7dd92a51f0d1",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\38478e30301421ef54894f53611d8f89f3f9dff6a7f84f4aecec7dd92a51f0d1",
+      "max_q10_difference_bits": 0.0032207575958089797,
+      "membership": "seed_reconstruction",
+      "params_sha256": "dc6caedeeb4e5135290f7f56bb043bc03d0ed8a3fc90635275a45c40925fa16a",
+      "results_sha256": "8718f8e94d750aafc9a813e4517d0cef3ae042d8a61dc727c6867d0ba4e7e29d"
+    },
+    {
+      "run_id": "ca0c7c424f2d94d1faab1c81dbca3508cfe2ad4860ac8f95263ec3b13e038f2b",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\ca0c7c424f2d94d1faab1c81dbca3508cfe2ad4860ac8f95263ec3b13e038f2b",
+      "max_q10_difference_bits": 0.0032219461545396934,
+      "membership": "seed_reconstruction",
+      "params_sha256": "f4420250c95578e27aaf04d3ae26b23308230ff462f4fd7d7d684dacb316b7cb",
+      "results_sha256": "32e036b79f7b355ef6d52352e34227c0f5e59ef7a3a21d157b75539776026ee8"
+    },
+    {
+      "run_id": "da1c57cc83cfaea0e9d9d9091d08aa9ad4316a99a123a1e239f95e610cef643a",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\da1c57cc83cfaea0e9d9d9091d08aa9ad4316a99a123a1e239f95e610cef643a",
+      "max_q10_difference_bits": 0.003220395038330992,
+      "membership": "seed_reconstruction",
+      "params_sha256": "c71b7fc8029025b95eef5ddbb5033e6d3a389556eada3707993c395c29615166",
+      "results_sha256": "c1f13b606d949ba31c3b1191785f4b01e87b34dcbaef7562c429cafa2911469d"
+    },
+    {
+      "run_id": "ed3307aec26f593b7446283dd27fea6add80c95ac59fd49b217b3ad315f61d27",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\ed3307aec26f593b7446283dd27fea6add80c95ac59fd49b217b3ad315f61d27",
+      "max_q10_difference_bits": 0.0032195443120184297,
+      "membership": "seed_reconstruction",
+      "params_sha256": "d889f7580a0e1c1c6c3c5ab0a4275763b406d1275a026eb74f0a61e4d9b44855",
+      "results_sha256": "10056e485e58105127d3d082c74fe60ec8a394cd595afb2d0d59af61f9173e79"
+    },
+    {
+      "run_id": "45970e035c49292851e6d1dc8278575e404856d11bd49058136c2246304de873",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdIntermediateN\\runs\\45970e035c49292851e6d1dc8278575e404856d11bd49058136c2246304de873",
+      "max_q10_difference_bits": 0.0011762170754786028,
+      "membership": "verified_retained",
+      "params_sha256": "c2e7c2c30c70d363b57706c44dc020bebff04eea75926fe34ddc4edf6b813938",
+      "results_sha256": "12200f1d9c89f52bd73e5b9b8124c0152a012e272f7f7e38d3bc6fd32179a44b"
+    },
+    {
+      "run_id": "c84f7804fc03c68202865e296a4a576eb87d8325615c2dc76a2ef4f6f94c84ed",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdIntermediateN\\runs\\c84f7804fc03c68202865e296a4a576eb87d8325615c2dc76a2ef4f6f94c84ed",
+      "max_q10_difference_bits": 0.0014247874488652057,
+      "membership": "verified_retained",
+      "params_sha256": "3632c872ea98bcd6e2fd04e13059591e099b23ec2b242fd4bb85f08e72e07c40",
+      "results_sha256": "7d5e13aa8100bd17ad15a8023080644e9e02bd84a288e41cd8e64da21d137035"
+    },
+    {
+      "run_id": "c14a3bf958924e7a1aa9f61bdf662d972be8d03f44c272046e00cd564fc21e14",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdIntermediateN\\runs\\c14a3bf958924e7a1aa9f61bdf662d972be8d03f44c272046e00cd564fc21e14",
+      "max_q10_difference_bits": 0.0011185769203881646,
+      "membership": "verified_retained",
+      "params_sha256": "c69d8ab0c3887e0254da0c316e936eb6a660de89bb05e264a4c394ef24722985",
+      "results_sha256": "cb6eefc800a8256e4bdcaefa8bf13471d990ce2dbe17b394d5fce3ed29fb18a9"
+    },
+    {
+      "run_id": "02beda4623a9c230f496f1c51f6abd19f6df915ba9bdb7c6a83cbbf356b65747",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\02beda4623a9c230f496f1c51f6abd19f6df915ba9bdb7c6a83cbbf356b65747",
+      "max_q10_difference_bits": 9.931172116006692e-06,
+      "membership": "seed_reconstruction",
+      "params_sha256": "82e1c1d9aca93151f2e6512bc4589b1c84002ab52f1b9174cb9de8142958fb8b",
+      "results_sha256": "969c90c4f53acef62eee8eb67ef634993f1122dfaeb43512c0453f5263b783ff"
+    },
+    {
+      "run_id": "051150a5906c2913473bd22e3ad16faacd22ffe8d20f752089eab7d9e6ffe59b",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\051150a5906c2913473bd22e3ad16faacd22ffe8d20f752089eab7d9e6ffe59b",
+      "max_q10_difference_bits": 7.188664537971512e-06,
+      "membership": "seed_reconstruction",
+      "params_sha256": "8b866628991ef9d5569fd6d56f5f4bab686d7c8914b5b86350bb2fcc8170dc4d",
+      "results_sha256": "26f82bfe10551c519fea3d18a1d636ffe714b943370c37274b23c95699e9d03c"
+    },
+    {
+      "run_id": "3dbb10828159472c95e6317273781dd3fa658f8fb82f4bea8b15bc07434185ca",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\3dbb10828159472c95e6317273781dd3fa658f8fb82f4bea8b15bc07434185ca",
+      "max_q10_difference_bits": 2.301714481101058e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "99116ef157ae14d4310e2d07ed96d68a8f2e416ab001dfa2ef1fba9a8aef5a2f",
+      "results_sha256": "07e5c537f4227d40d659cf157274f9a0719b971a7fffa2e73a38ddff5f818739"
+    },
+    {
+      "run_id": "5624acf2b27c74eff2545b8d676cbbcf55f7d98b36d18e3521976c39fb11c95f",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\5624acf2b27c74eff2545b8d676cbbcf55f7d98b36d18e3521976c39fb11c95f",
+      "max_q10_difference_bits": 2.420194123853303e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "5514b026a62cc7af28968d073209a05d90dd9509a239b7ffc8fa2f85f8872888",
+      "results_sha256": "992749a99448ae297fb63e2a87f1c99d8e12143ae72bfaf039f9881969dee6d1"
+    },
+    {
+      "run_id": "5b7d0226e757091ccbdb5c11cf1e5264e6788b857eb4099a59b5d244d6e26d07",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\5b7d0226e757091ccbdb5c11cf1e5264e6788b857eb4099a59b5d244d6e26d07",
+      "max_q10_difference_bits": 2.206663130144282e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "6c315197b59f2e4ac0452f7ba69c64dbf5db67ea2b170b3d97ce32d9571fa787",
+      "results_sha256": "0113f2ceec73fbdfcc2b5198eca54657eb29b3d98f9bc1c06d604833fa27d236"
+    },
+    {
+      "run_id": "5ddf054d0d5aaddba7182a16a0f60823cbe579769254562a8be23603d3bc9563",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\5ddf054d0d5aaddba7182a16a0f60823cbe579769254562a8be23603d3bc9563",
+      "max_q10_difference_bits": 7.466047783455387e-06,
+      "membership": "seed_reconstruction",
+      "params_sha256": "3fc69b7e3c394330af1458b8fa77069b772cc89ee81ba6bded2a765262b1502d",
+      "results_sha256": "095dfc1ea99b4a11ef98357f23aa8e4f61a46664201addef5d2ec45c8251701a"
+    },
+    {
+      "run_id": "ad865ad0ead6de6ed2d025cf355d32841b41782f99bb45cd592a6405e555f33b",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\ad865ad0ead6de6ed2d025cf355d32841b41782f99bb45cd592a6405e555f33b",
+      "max_q10_difference_bits": 1.0113963509250645e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "104868e7fe52620741b76ff9dc5891d16953e7bad66a744b1422a2dd52312188",
+      "results_sha256": "570851bf569cb51a0830b2f4b0f30ed86cc108855c6ae51b61a0cc7c3a02c3a2"
+    },
+    {
+      "run_id": "b0dd93c7e70cf5ec27cceac14ee098f52e47f8ef1f2cb1879f8a8f44985130a0",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\b0dd93c7e70cf5ec27cceac14ee098f52e47f8ef1f2cb1879f8a8f44985130a0",
+      "max_q10_difference_bits": 2.067987533105331e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "9243de5f50efac8081f867cf3ff6a39339ffd3d102cd812cde43fc919fe58ff5",
+      "results_sha256": "9ec37bb5e0ac396d29897e16c7030493641576200204d8f377791d51de92470e"
+    },
+    {
+      "run_id": "ba0e84ff7832b8307e5fc261cfc1ec1eb17524015d2679dad2a96e5add8de0d3",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\ba0e84ff7832b8307e5fc261cfc1ec1eb17524015d2679dad2a96e5add8de0d3",
+      "max_q10_difference_bits": 1.7586030645944106e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "382ffcb801859d5f313ed5e09cc9031604a2a13a06de42b1ee90deecd6ba8f8f",
+      "results_sha256": "ed008422f530fa9e5f876817b0f74550aa071bfc28ff32fd8d51ffb8051c1a14"
+    },
+    {
+      "run_id": "c303dd0cff704624c93d9b73a4003f72418ecefef0f0c09322d6887880233ad2",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\c303dd0cff704624c93d9b73a4003f72418ecefef0f0c09322d6887880233ad2",
+      "max_q10_difference_bits": 1.0943728826595667e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "7e0ddd185772e88956702769b41ec8c718b77d6806707af72c4d79b01947d7a7",
+      "results_sha256": "6fb3fdb5bb6561b55ca3d6d3d4487d9a7c1aebf8d765664cc6b21f82edab5c6a"
+    },
+    {
+      "run_id": "12935dca961cd31d4165d8d1c2b5e1127e0eb2d9dc777b4fbe61203180399d3b",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\12935dca961cd31d4165d8d1c2b5e1127e0eb2d9dc777b4fbe61203180399d3b",
+      "max_q10_difference_bits": 1.501089143496337e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "01a6d02e478c983b3dd2ed2a314683361a8801e384af3e68dbeec4cd62fd03c4",
+      "results_sha256": "ae59cf12e62b188f24600bfeb395a9e7f790691ac1fb770170bfd5bdf1fedfde"
+    },
+    {
+      "run_id": "1b253a4492f69ef93c8c71acacf0a69dce91d238fb99e50293c10c6c0499c3d6",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\1b253a4492f69ef93c8c71acacf0a69dce91d238fb99e50293c10c6c0499c3d6",
+      "max_q10_difference_bits": 1.6244073180682328e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "48b24acc1ad19204b60c9e5b4bc503d21780c745d46e3e486bb06a158478073c",
+      "results_sha256": "41523ad13dc8ecb1652f58f99b3910734215c094e5b86dcd6129ad50ed5dbdf1"
+    },
+    {
+      "run_id": "39aca262592a2c141a7256f86446cd621f19a32ebcd9b973612fd1b20d646fab",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\39aca262592a2c141a7256f86446cd621f19a32ebcd9b973612fd1b20d646fab",
+      "max_q10_difference_bits": 1.745660538243765e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "5b0b924c9f5cc711ad9573e6d6ac29366576389f4af5a691aada5ad442571743",
+      "results_sha256": "6e175d5fa768c338e4e30fa5979c0fbdc37e0ee8bc6fa10e6adb9ff70f307bf7"
+    },
+    {
+      "run_id": "55381a0e715e513b75248aeb935af20373254b933bf2a64bed58e4431a3523de",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\55381a0e715e513b75248aeb935af20373254b933bf2a64bed58e4431a3523de",
+      "max_q10_difference_bits": 1.667480490652462e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "2809264520294792e4eb92de32c50ee4c92798539fab0fee3aa27893add693b2",
+      "results_sha256": "c57b35fa45b5033520f8993f3340503217c8afd9f92c64968e9cd16902c5b530"
+    },
+    {
+      "run_id": "8d026d99cba397a4a01ad23b3b6996e3504264f34ab6f9c672f17420ea9398dc",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\8d026d99cba397a4a01ad23b3b6996e3504264f34ab6f9c672f17420ea9398dc",
+      "max_q10_difference_bits": 1.5119940775520924e-05,
+      "membership": "seed_reconstruction",
+      "params_sha256": "7576581a8ea82339ca15b647dbeb692bc1ce73cf66f992a5057c6a69c3ae96de",
+      "results_sha256": "4f56706971e8f9ae4f026f9db5c0d161e0804a343a65c5604e288c6cc609fd59"
+    },
+    {
+      "run_id": "15016ded7756a15bbcae9082f2b3982271c34c8aac584cc5194c80a33cd996ed",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdIntermediateN\\runs\\15016ded7756a15bbcae9082f2b3982271c34c8aac584cc5194c80a33cd996ed",
+      "max_q10_difference_bits": 0.0060877734002685036,
+      "membership": "verified_retained",
+      "params_sha256": "202f229e0d50ea8a973b7089351b105be3e67fc040d8b36f147be50f02b61f55",
+      "results_sha256": "fc82719eeab46ee72d3128faaef207901f536015b1e6cf86e96f028d8c772273"
+    },
+    {
+      "run_id": "fb3ad73feb030432ca3cd1b24831e6586f57ea9ada93999bd218f2c1f3351937",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdIntermediateN\\runs\\fb3ad73feb030432ca3cd1b24831e6586f57ea9ada93999bd218f2c1f3351937",
+      "max_q10_difference_bits": 0.0073728837571491665,
+      "membership": "verified_retained",
+      "params_sha256": "6cb1ce757d5af7a086ea1c931502aa7350aab162f8b308d0b119aad8196ac6a0",
+      "results_sha256": "24b1a3d490f3c3ec34cef1d00cdaf952fca8a94b4791233ae8303c1a8c816642"
+    },
+    {
+      "run_id": "7ff1c0cef241a76b06974760967dd21ec059a3038b71795254b986bd3e43c0b9",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdIntermediateN\\runs\\7ff1c0cef241a76b06974760967dd21ec059a3038b71795254b986bd3e43c0b9",
+      "max_q10_difference_bits": 0.00783581762227302,
+      "membership": "verified_retained",
+      "params_sha256": "b635cdaecb900796f4f375f1d28a4bd2074869af407c3bb14ad8f234a0791715",
+      "results_sha256": "fd2109299fcd2e400f882b1f890b023ac07a3d2c5fb867607ab67530049d83bc"
+    },
+    {
+      "run_id": "31354a279d0787707cf179923f0052ef0c22bb502239b26ec76ff90d1aa179f6",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\31354a279d0787707cf179923f0052ef0c22bb502239b26ec76ff90d1aa179f6",
+      "max_q10_difference_bits": 0.004349542414331692,
+      "membership": "seed_reconstruction",
+      "params_sha256": "6d534784e5c122974dd93101b6c8fc40fc2f22f8dc59ea5376e867941b088370",
+      "results_sha256": "20b849491b22b4d3212d88bd2c3f33c8e212eed69fbed0702cd6bd866e3ba542"
+    },
+    {
+      "run_id": "95c13964d5dfd8862a9435bcdb2d65d8ba7ae835aa123ad9603c885f8ddeed13",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\95c13964d5dfd8862a9435bcdb2d65d8ba7ae835aa123ad9603c885f8ddeed13",
+      "max_q10_difference_bits": 0.00434818805089144,
+      "membership": "seed_reconstruction",
+      "params_sha256": "05cd9a9322a8e77c57be9c0de122e53e305c4b38376232f6bd2ab0f30d63a8c2",
+      "results_sha256": "13659d9a067dbfa1de014d66098e2d3c346c21aaefbf3d240c4d16d41b794fad"
+    },
+    {
+      "run_id": "ae528ae576098fe5bdee0c4a6ad3b0152edd591420c4add914aeee23482d6e01",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\ae528ae576098fe5bdee0c4a6ad3b0152edd591420c4add914aeee23482d6e01",
+      "max_q10_difference_bits": 0.0043494259489161025,
+      "membership": "seed_reconstruction",
+      "params_sha256": "b9a781e68a8e9220de06f74b04a5e395999a710d9b39ce7ecaa37f5c0115d27a",
+      "results_sha256": "904f7108b8bca14c94cd481adccc3530da4d70b8434adea40a3ed1def8343e1f"
+    },
+    {
+      "run_id": "c9d78fcb47f8ce78774566cdc9b1268205d6ac9fec392081ec346f4228276526",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\c9d78fcb47f8ce78774566cdc9b1268205d6ac9fec392081ec346f4228276526",
+      "max_q10_difference_bits": 0.004348714747740942,
+      "membership": "seed_reconstruction",
+      "params_sha256": "e8b88b38cf6d7dd370bbea6f822e10c3531510dba109e913987c5e2f27471a73",
+      "results_sha256": "a52fe00ffd68571159ea7f113db2c4deed7025501d4f502cbebd2a910684f666"
+    },
+    {
+      "run_id": "f5b897e09fe22b9b56038249652cbec24b12bec64b700c2b9d5bc44215f22bd3",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\f5b897e09fe22b9b56038249652cbec24b12bec64b700c2b9d5bc44215f22bd3",
+      "max_q10_difference_bits": 0.0043503428139013214,
+      "membership": "seed_reconstruction",
+      "params_sha256": "592d07c727a2f051f75c8e294ce80956be1ea325d905f583549de38ca72f4af2",
+      "results_sha256": "f67fe224803f0cd0d4e55f290aab264bfcced3ae27e5596d5df8d32575387f03"
+    },
+    {
+      "run_id": "fc105ff67e669723fcdfbc6dd0045cc967f75bb2977a36fd67917fb30e532fa5",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\fc105ff67e669723fcdfbc6dd0045cc967f75bb2977a36fd67917fb30e532fa5",
+      "max_q10_difference_bits": 0.004349721126005714,
+      "membership": "seed_reconstruction",
+      "params_sha256": "866b2a8b14ee61209227068f793fa4ab5f8c96106e7f5578bad83d318402c933",
+      "results_sha256": "28ed40dbd5b887b23713103ed9e9f016a819d188120d8a049241dfa0646137ba"
+    },
+    {
+      "run_id": "019486c32685738559aa78982a0e8f9851c579869e970762df27e2bb0ff977d5",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\019486c32685738559aa78982a0e8f9851c579869e970762df27e2bb0ff977d5",
+      "max_q10_difference_bits": 0.005267116021333548,
+      "membership": "seed_reconstruction",
+      "params_sha256": "50e95a937f2fd1200bbbc2462f3cc25c88918205b1bc8f6ca77c2b92c03b95bf",
+      "results_sha256": "32f9391a63d2dab96adf60f522d7677b59e0b914b0d6dcfdfac2b0530538769e"
+    },
+    {
+      "run_id": "409298cd0a23f357c2682153d3deb5b9e03e264a36697a1083441cf29026c743",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\409298cd0a23f357c2682153d3deb5b9e03e264a36697a1083441cf29026c743",
+      "max_q10_difference_bits": 0.0052668365495042585,
+      "membership": "seed_reconstruction",
+      "params_sha256": "c9f8e4a45f21d6aca0f16eb676299c61c74f9a51d93ca0d545a151d11014d912",
+      "results_sha256": "3439a985a1a44209a9e5f46fbe299b0bf37486e8cf226bc36ce07708a2773159"
+    },
+    {
+      "run_id": "58066582fa0544483595fed7c4ba9772ac01eca5df127a6c867f73c378a08757",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\58066582fa0544483595fed7c4ba9772ac01eca5df127a6c867f73c378a08757",
+      "max_q10_difference_bits": 0.005268623698346617,
+      "membership": "seed_reconstruction",
+      "params_sha256": "4fdc7ed83e16eac43aa41a68571d6544862facd65c72f982753c573d95624e9c",
+      "results_sha256": "8c270f1b68f75beba39fd49e196ec9ee6b401675a9c740d666d75cf500e67495"
+    },
+    {
+      "run_id": "66dd882e94c1383fd818ff631d6d95235fbdb68b90e9fe37ccfd45ea10af53c4",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\66dd882e94c1383fd818ff631d6d95235fbdb68b90e9fe37ccfd45ea10af53c4",
+      "max_q10_difference_bits": 0.005268177604034127,
+      "membership": "seed_reconstruction",
+      "params_sha256": "d928a64956e8ea7865eb841a4c2663b65bb758bbf130266c1b2e96b0a74cbdc8",
+      "results_sha256": "f596f187258634ee13f3c2e85de5f08c8b1fbd2efac7816f66c608e06b5c4662"
+    },
+    {
+      "run_id": "147dfb99e4a4116150d6f8696f54fb62ae4a423a42d5923ccfa5b94ed788d7ab",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\147dfb99e4a4116150d6f8696f54fb62ae4a423a42d5923ccfa5b94ed788d7ab",
+      "max_q10_difference_bits": 0.005596626243801361,
+      "membership": "seed_reconstruction",
+      "params_sha256": "133155def7dae01049920f550df199611adea76235f0e4f77bf6b1550708b46b",
+      "results_sha256": "6556d147c41269752208b44f4c611a773226922100463885e99017245e232961"
+    },
+    {
+      "run_id": "5e4bfac6f1ff849beda984a017c026704c8d6bfeb7506b3f06401d3893593c52",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\5e4bfac6f1ff849beda984a017c026704c8d6bfeb7506b3f06401d3893593c52",
+      "max_q10_difference_bits": 0.005598242114069674,
+      "membership": "seed_reconstruction",
+      "params_sha256": "236bcfaa255c3fa64a85fbea2761dc4ee93c325c2412512030b5301faf8442d6",
+      "results_sha256": "12d335085b0ecc4d8ba1021baf49ee7c0207b807f3ae4e686d6166b55bf29f15"
+    },
+    {
+      "run_id": "95d4a1ac423ea9a888c9e65af3fd32434e2ca49106ce9f2e1041f0b8d5ab5060",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\95d4a1ac423ea9a888c9e65af3fd32434e2ca49106ce9f2e1041f0b8d5ab5060",
+      "max_q10_difference_bits": 0.005597643467360011,
+      "membership": "seed_reconstruction",
+      "params_sha256": "21727639bfd69c55b65cffc0884ff3e6e2e8f80aedcf1e15dbd0c5eb08249154",
+      "results_sha256": "a417f4fc79a9dfe918ca8cef8460f6571b06f5cfdbaf18d6c2f68a4aea999449"
+    },
+    {
+      "run_id": "9ac0b2df5f84c229c6ba049b709cefecb5b9558ce5f62cd761a906eb2c387041",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\9ac0b2df5f84c229c6ba049b709cefecb5b9558ce5f62cd761a906eb2c387041",
+      "max_q10_difference_bits": 0.005596509658139709,
+      "membership": "seed_reconstruction",
+      "params_sha256": "e73970782f60f4fe769042294f154b1f795b9512c4818f0d8aa1a4eab6afa47e",
+      "results_sha256": "4f883e15ada086a1fa9ebd76defcbbf1db98805b6e4b6e83404356fa1036ced0"
+    },
+    {
+      "run_id": "afb47db7feeb6d8b68cc31489e4385939171dd13410426a45d605e0818492bf4",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_LambdaCollapse\\runs\\afb47db7feeb6d8b68cc31489e4385939171dd13410426a45d605e0818492bf4",
+      "max_q10_difference_bits": 0.005597884692294344,
+      "membership": "seed_reconstruction",
+      "params_sha256": "6cfb0b1821d1bcf0103ff7ab920cd6b5d2fec5a653bb5db34c523a86473627e7",
+      "results_sha256": "85054131eec7a4d06b1e239d398b5f1fcd65e74ef7553b0ae4a56cbe4da5f723"
+    },
+    {
+      "run_id": "0a7f88ead0afc34158e94826b7ce97f290e24869b1d7b28f8f37d2791aaa94e0",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdFiniteN\\runs\\0a7f88ead0afc34158e94826b7ce97f290e24869b1d7b28f8f37d2791aaa94e0",
+      "max_q10_difference_bits": 0.0008696311606601753,
+      "membership": "verified_retained",
+      "params_sha256": "c0c5b04fb98c80305b7a60f243abcb1f8a6898dd24ed37c6dd3b060987ca3d18",
+      "results_sha256": "9adb8a50c9e0bcfb50211caf3cd669eedc5c415e8a1d03d8bbe01221519691a4"
+    },
+    {
+      "run_id": "755e723b8f91538391967a138f9ad18016bdfc6ae0c8fb289a13e18e18d2478a",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdLambda0933\\runs\\755e723b8f91538391967a138f9ad18016bdfc6ae0c8fb289a13e18e18d2478a",
+      "max_q10_difference_bits": 0.0010632030806223686,
+      "membership": "verified_retained",
+      "params_sha256": "13280c0fe2e46ca812b53994eadd5238039e08f86f34cf0bb0942110776d7dbd",
+      "results_sha256": "1f0e9627de22daa349c11329cd9a7294de33cbd22c854079da95d3b1a30c26dd"
+    },
+    {
+      "run_id": "e27baebf924fd2c368dab269e54508e77464f54ff13e4ac1c68aa8babdfd82f6",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdFiniteN\\runs\\e27baebf924fd2c368dab269e54508e77464f54ff13e4ac1c68aa8babdfd82f6",
+      "max_q10_difference_bits": 0.0011210508190308,
+      "membership": "verified_retained",
+      "params_sha256": "01b083fc588156ec072bb15c2350ab1552fc90b7328de0c545a283dd4ea0d7ee",
+      "results_sha256": "160e282d30d4b6c86cd56c2928aa31c1662a0d76307224914436df2a8614d4b2"
+    },
+    {
+      "run_id": "e6e0a9e85f0bb6c6b52266570432bc2234ea5294041d48c1dfc2759c7adcc0ec",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdFiniteN\\runs\\e6e0a9e85f0bb6c6b52266570432bc2234ea5294041d48c1dfc2759c7adcc0ec",
+      "max_q10_difference_bits": 0.0007075714780865328,
+      "membership": "verified_retained",
+      "params_sha256": "fd914bc7867ba2882992188aae1a8ece737c7d176059b2ad97274fb98722c914",
+      "results_sha256": "7552aeb36e4aa5c913a5bcf018efc82fc5f470e30d613fb6ec1aefc9025748d9"
+    },
+    {
+      "run_id": "e205d758c4cd1c8818be68b0e1cf595eeff17e8f562a2a55910fefc1159415ab",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdLambda0933\\runs\\e205d758c4cd1c8818be68b0e1cf595eeff17e8f562a2a55910fefc1159415ab",
+      "max_q10_difference_bits": 0.0008445636612293139,
+      "membership": "verified_retained",
+      "params_sha256": "a777fb9dad3f387bbc841ae025850cd84274f9d2b019b3295e0cac523c49e472",
+      "results_sha256": "b126753bcc0a09109358a46f799ffda44cdfa7806a32bc5dcc231eace2c27a30"
+    },
+    {
+      "run_id": "7d68c1bb12e088f7fa527759f9ccc441b96aa99f2a56ca53df198c8cfbf5289e",
+      "source": "D:\\Github\\QD-summary-Imperfect-CNOT\\data\\Paper_A_final_FragmentThresholdFiniteN\\runs\\7d68c1bb12e088f7fa527759f9ccc441b96aa99f2a56ca53df198c8cfbf5289e",
+      "max_q10_difference_bits": 0.0019039046769647738,
+      "membership": "verified_retained",
+      "params_sha256": "7a25187b679028adb9be3b04c18dfeb2d9bc7ecd9fd98833fe5677842ced561b",
+      "results_sha256": "c889f1521db6914b761e0897db9d5d68ae1bb24969572d92a453f4ce94c13e6c"
+    }
+  ],
+  "figure_sha256": "2146a6f3c33b333951d0e6c3a62a791deda390d64ce5491ab0077153694bc839"
+}

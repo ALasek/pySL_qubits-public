@@ -1,0 +1,36 @@
+{
+  "study_id": "qdsummary_jobs_1_3_dt_scan_v1",
+  "description": "Exact-state timestep screening for the three no-EE stability sweeps at alpha2=3.",
+  "output_dir": "experiments/results/qdsummary_jobs_1_3_dt_scan_v1",
+  "T": 30.0,
+  "sampleT": 1.0,
+  "alpha2": 3.0,
+  "screen_bias_values": [0.0, 0.5],
+  "validation_bias_values": [0.0, 0.25, 0.5],
+  "dT_values": [0.001, 0.0016, 0.002, 0.0025, 0.003125, 0.004, 0.005, 0.00625],
+  "acceptance_calibration": {
+    "report": "experiments/results/mironowicz_nE17_noee_dt_scan_v1/report.json",
+    "dT": 0.025,
+    "multiplier": 2.0,
+    "metrics": [
+      "max_norm_deviation",
+      "max_rhoS_trace_distance",
+      "max_S_vn_abs_error"
+    ]
+  },
+  "jobs": [
+    {
+      "id": "Stab_pi4",
+      "config": "batch_configs.qdsummary_replace_fig_Stab_pi4_p_alpha2_sweep"
+    },
+    {
+      "id": "Stab_pi8",
+      "config": "batch_configs.qdsummary_replace_fig_Stab_pi8_p_alpha2_sweep"
+    },
+    {
+      "id": "Stab_pi0",
+      "config": "batch_configs.qdsummary_replace_fig_Stab_pi0_p_alpha2_sweep",
+      "dT_values": [0.00025, 0.0004, 0.0005, 0.000625, 0.0008, 0.001, 0.0016, 0.002, 0.0025, 0.003125, 0.004, 0.005, 0.00625]
+    }
+  ]
+}

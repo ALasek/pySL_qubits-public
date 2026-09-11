@@ -1,0 +1,15 @@
+# Optional wheel build #
+wheel
+
+# Essential modules #
+numpy
+scipy
+pycuda
+scikit-cuda
+
+reikna
+
+
+# Extra additions #
+
+matplotlib

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-07-15",
+  "purpose": "Run replacement jobs 4-10 after the three no-EE stability preproduction sweeps have completed.",
+  "source_manifest": "qdsummary_replacements/remaining_bad_alpha2_manifest.json",
+  "runner": {
+    "script": "scripts/run_qdsummary_replacements.py",
+    "default_command": "python scripts/run_qdsummary_replacements.py --manifest qdsummary_replacements/remaining_bad_alpha2_jobs_4_10_manifest.json --workers 2 --gpu-ids 0",
+    "dry_run_command": "python scripts/run_qdsummary_replacements.py --manifest qdsummary_replacements/remaining_bad_alpha2_jobs_4_10_manifest.json --workers 2 --gpu-ids 0 --dry-run"
+  },
+  "replacements": [
+    {
+      "labels": ["fig:StabDet_pi8", "fig:analytic_detail_pi8"],
+      "source_figures": [
+        "Figs_1/DetailSweep2Pi8.png",
+        "Figs_1/Analytic_DetailSweep2Pi8.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_StabDet_pi8_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_StabDet_pi8_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_StabDet_pi8_p_alpha2_sweep",
+      "notes": "Reruns the theta=pi/8 zoomed p/alpha2 detail sweep."
+    },
+    {
+      "labels": ["fig:StabDet_pi0", "fig:analytic_detail_pi0"],
+      "source_figures": [
+        "Figs_1/DetailSweep2Pi0.png",
+        "Figs_1/Analytic_DetailSweep2Pi0.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_StabDet_pi0_p_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_StabDet_pi0_p_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_StabDet_pi0_p_alpha2_sweep",
+      "notes": "Reruns the theta=0 zoomed p/alpha2 detail sweep."
+    },
+    {
+      "labels": ["fig:thetaSweep", "fig:analytic_theta_sweep"],
+      "source_figures": [
+        "Figs_1/ThetaSweep.png",
+        "Figs_1/Analytic_ThetaSweep.png"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_thetaSweep_theta_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_thetaSweep_theta_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_thetaSweep_theta_alpha2_sweep",
+      "notes": "Reruns the theta/alpha2 sweep at fixed inferred bias."
+    },
+    {
+      "labels": ["fig:ZZ_to_ZX_epsilon_alpha2_sweep"],
+      "source_figures": [
+        "Figs_sweeps/Mironowicz_ZZ_to_ZX_rand_epsilon_alpha2_sweep/qd_slope_2D_x-Mironowicz_ZZ_to_ZX_epsilon_y-Mironowicz_alpha2_N-14_T--1.jpg"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_ZZ_to_ZX_epsilon_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_ZZ_to_ZX_epsilon_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_ZZ_to_ZX_epsilon_alpha2_sweep",
+      "notes": "Reruns the near-ZX epsilon/alpha2 E-E sweep with store_correlators enabled."
+    },
+    {
+      "labels": ["fig:ZX_alpha2_HEE_sweep"],
+      "source_figures": [
+        "Figs_sweeps/Mironowicz_transverse_alpha2_HEE_sweep/qd_slope_2D_x-H_EE_J_y-Mironowicz_alpha2_N-14_T--1.jpg"
+      ],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_ZX_alpha2_HEE_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_ZX_alpha2_HEE_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_ZX_alpha2_HEE_sweep",
+      "notes": "Reruns the pure Z-X E-E coupling strength/alpha2 control with store_correlators enabled."
+    },
+    {
+      "labels": ["fig:MBL2_RawZ"],
+      "source_figures": ["Figs_MBL/MBL2_RawZ.png"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_MBL2_transverse_HEE_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_MBL2_transverse_HEE_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_MBL2_transverse_HEE_alpha2_sweep",
+      "notes": "Reruns the intermediate-time transverse E-E MBL/stability sweep with store_correlators enabled."
+    },
+    {
+      "labels": ["fig:MBL3_lt_RawZ"],
+      "source_figures": ["Figs_MBL/ISE_2Dplot_MBL_N=16 T=500.jpg"],
+      "replacement_type": "batch_config",
+      "replacement_path": "batch_configs/qdsummary_replace_fig_MBL3_longtime_transverse_HEE_alpha2_sweep.py",
+      "run_command": "python pySLbatch.py --config batch_configs.qdsummary_replace_fig_MBL3_longtime_transverse_HEE_alpha2_sweep",
+      "analyze_command": "python pySL_batchAnalyze.py --config batch_configs.qdsummary_replace_fig_MBL3_longtime_transverse_HEE_alpha2_sweep",
+      "notes": "Reruns the long-time transverse E-E MBL/stability sweep with T=500, printT=250, AverageOverRunsN=1, and store_correlators enabled."
+    }
+  ]
+}
