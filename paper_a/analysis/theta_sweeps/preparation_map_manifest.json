@@ -1,0 +1,57 @@
+{
+  "p_points": 101,
+  "theta_points": 121,
+  "p_range": [
+    0,
+    1
+  ],
+  "theta_range": [
+    0,
+    1.5707963267948966
+  ],
+  "parameter_cases": 12221,
+  "source_config": "analysis/theta_sweeps/config.json",
+  "realizations": 24,
+  "n_environment": 16,
+  "fragment_size": 2,
+  "fragments_per_realization": 64,
+  "time_window": [
+    20,
+    40
+  ],
+  "time_step": 1,
+  "g_std": 0.1,
+  "calculation": "Direct no-field overlap at each grid point; no interpolation of information values.",
+  "reduction": "Fragment mean, time median within each realization, realization mean; information in bits, H_Z(S)=1.",
+  "overlay_maximum": "p=(1-cos(theta))/2; Lambda=1",
+  "overlay_minimum": "p=(1+sin(theta))/2; Lambda=0; also the isolated endpoint p=0, theta=pi/2",
+  "previous_slice_points_checked": 363,
+  "max_previous_slice_difference": 8.04243281012767e-16,
+  "hashes": {
+    "analysis\\theta_sweeps\\config.json": "9a54c04a98a267360742f79ebe0ccac9864acc6b18a82331aae0f7e0e2bae892",
+    "analysis\\theta_sweeps\\preparation_map.npz": "c93655f096c6b78c4ace46b8e0304ccb4407fc63d84d6484a4dc77a5a2a8197d",
+    "scripts\\validation\\recalculate_exact.py": "7cd00b4360774f8978ed80894b2803dc44a3984128378ef854f71a01e9cfbfa9",
+    "scripts\\validation\\plot_theta_sweeps.py": "11310487463c276c8901a4660588b5eb06c4a529794b7f690ed3df5ad1100bfa"
+  },
+  "figure_hashes": {
+    "figures\\paper_a\\theta_preparation_map.pdf": "4678ce30e5ca464b2556ea59dc5dcac8d5782e324e6576a101e7699d8f672129",
+    "figures\\paper_a\\theta_preparation_map.png": "a190f0b9e537b063e0c692bfd34457bc26abc42554d716e4b066ed28cda12105"
+  },
+  "calculation_script_sha256": "998dbadc2f21d7eee41dff67fdb02796aabe2e5c36ce299259f49d0d5455d82b",
+  "plot_script_sha256": "c2e486c13014797a2db99abc91fc4412daf7dce2a48b2c53767b3675a4440bff",
+  "panel_c_cuts": [
+    {
+      "p": 0.15,
+      "grid_index": 15
+    },
+    {
+      "p": 0.25,
+      "grid_index": 25
+    },
+    {
+      "p": 0.75,
+      "grid_index": 75
+    }
+  ],
+  "panel_c_source": "Exact rows of chi_mean in preparation_map.npz; same reduction as panel b, no smoothing or new simulation."
+}

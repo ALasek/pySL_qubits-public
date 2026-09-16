@@ -1,0 +1,26 @@
+{
+  "general_propagator_checks": [
+    {
+      "p": 0.13,
+      "theta": 0.2748893571891069,
+      "max_realization_difference": 1.1102230246251565e-16
+    },
+    {
+      "p": 0.75,
+      "theta": 0.39269908169872414,
+      "max_realization_difference": 5.134781488891349e-16
+    },
+    {
+      "p": 0.9,
+      "theta": 1.308996938995747,
+      "max_realization_difference": 5.828670879282072e-16
+    },
+    {
+      "p": 1.0,
+      "theta": 1.5707963267948966,
+      "max_realization_difference": 1.48333276331039e-15
+    }
+  ],
+  "maximum_curve_error": 0.0,
+  "blind_curve_error": 4.440892098500626e-16
+}

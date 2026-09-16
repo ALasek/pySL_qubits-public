@@ -2,9 +2,9 @@
 
 This package accompanies *Environment Alignment and Redundant Record
 Formation in Imperfect-CNOT Quantum Darwinism*, by Aleksander Lasek and
-Paweł Horodecki. It is included in the `paper-a-v1.1.0` software snapshot.
+Paweł Horodecki. Release `paper-a-v1.2.0` matches the final figure set.
 
-## Redraw the published plots
+## Redraw the figures
 
 From the repository root, in a Python 3.11 virtual environment:
 
@@ -13,76 +13,101 @@ python -m pip install -r paper_a/requirements.txt
 python paper_a/reproduce_figures.py
 ```
 
-This uses the bundled processed data and requires no GPU, CUDA, raw
-trajectories, private repositories, or environment variables. LaTeX must
-be on PATH with `fontenc`, `lmodern`, `amsmath`, `amssymb`, and the standard
-Matplotlib TeX support packages (`type1cm`, `cm-super`). TeX Live and MiKTeX
-can supply these. Matplotlib uses LaTeX only to render labels.
+This uses bundled processed data and requires no GPU, CUDA, raw trajectories,
+private repositories, or environment variables. LaTeX must be on PATH with
+`fontenc`, `lmodern`, `amsmath`, `amssymb`, and Matplotlib's TeX support
+packages (`type1cm`, `cm-super`). TeX Live and MiKTeX can supply these.
 
 The output directory is `paper_a/output/`; change it with `--output PATH`.
-It contains main Figs. 2–8 and Supplemental Figs. S1–S5, their hashes, and
-small derived summary files. Figure 1 is supplied as TikZ source:
+It contains the 15 numerical plots (main Figs. 2–9 and Supplemental Figs.
+S1–S7), their hashes, and derived summaries. The `FIGURES` mapping in
+`reproduce_figures.py` gives the filenames and manuscript numbering.
+Figure 1 is supplied as TikZ source:
 
 ```sh
 cd paper_a
-pdflatex -interaction=nonstopmode -halt-on-error schematic.tex
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=output schematic.tex
 ```
 
-That command additionally needs `standalone` and TikZ/PGF. The schematic
-has no numerical inputs. Do not use an input-data directory as `--output`.
+That command also needs `standalone` and TikZ/PGF. The schematic has no
+numerical inputs. Do not use an input-data directory as `--output`.
 
-The release check ran on Python 3.11.9 with the pinned versions above.
-All 12 regenerated plot PDFs matched the manuscript's rendered pixels
-exactly at 72 dpi. The six main-figure tables also matched their retained
-source hashes. PDF file hashes can vary with timestamps and TeX versions;
-they are not a portable numerical equivalence test.
+All 15 regenerated plot PDFs match the manuscript's rendered pixels at
+72 dpi in the checked Python 3.11.9 environment with the pinned dependencies.
+The release also passes 23 CPU analysis tests. `VALIDATION.json` records the
+checks. PDF file hashes can vary with timestamps and TeX versions; they are
+not a portable numerical equivalence test.
 
-## Contents and interpretation
+## Data and conventions
 
-- `figures/paper_a/source_manifests/`: the tables used for main Figs. 2–7,
-  S2, S4, and the fixed-time larger-environment check. The complete
-  `threshold_sizes_complete_2026_09_08` manifest is the source for Fig. 6(b).
-- `analysis/`: expanded pointer-basis curves (Fig. 8), matched-preparation
-  statistics and paired differences (S1), the percentile comparison (S3),
-  and field mean/width statistics (S5).
-- `scripts/`: retained plotters, exact conditional-state calculations,
-  validation routines, and tests. The simple command above is the portable
-  entry point; older validation commands may require raw inputs and explicit
-  path arguments.
-- `SOURCE_MANIFEST.json`: hashes of bundled scripts/data and the manuscript
-  revision from which they were assembled.
+- `figures/paper_a/source_manifests/`: saved tables for the original main
+  plots and numerical validation. The complete threshold-size manifest
+  supplies current Fig. 7(b).
+- `analysis/theta_sweeps/`: the full preparation/angle grid (Fig. 2) and
+  local-field angle sweeps (Fig. S6), including seeds and fragment choices.
+- `analysis/mixed_state_comparison_4qubits/` and `analysis/matched_pure_mixed/`:
+  local records and SBS-distance comparisons for Fig. S7(a–c). Four qubits
+  means the system plus three environment qubits; one witness is observed.
+- `analysis/mixed_basis_size/`: fixed-time, time-optimized, and refined
+  measurement-basis results for Fig. S7(d). Environment size excludes the
+  system; one witness remains observed as unobserved witnesses are added.
+- The other `analysis/` directories retain the expanded pure-state basis
+  scan, paired preparations, percentile comparison, and field mean/width data.
+- `scripts/`: plotters, exact calculations, validation routines, and tests.
+- `SOURCE_MANIFEST.json`: source/data hashes and the manuscript revision used
+  to assemble this package. Plotter adaptations separate input and output paths.
+  Historical calculation manifests retain the original calculation-time
+  hashes; `SOURCE_MANIFEST.json` records the current packaged files. Absolute
+  seed-source paths have been reduced to their original batch-relative paths;
+  the bundled seeds are sufficient for recalculation.
 
 Information is in bits or normalized by the pointer entropy as indicated
-in the manuscript. Original NPZ information arrays used by raw-data checks
-are in nats. Figures average fragment statistics within each realization
-before averaging realizations. Fig. 6(b) finds the threshold fragment size
-within each realization, averages equivalent preparations with paired seeds,
-and then averages over realizations with a crossing. Undefined crossings
-are excluded and marked as conditional in the paper. Persistence means
-passing at every sampled time; a disorder-averaged minimum above threshold
-does not imply that every realization passes.
+in the manuscript. Raw NPZ trajectory arrays used by older validation
+commands store information in nats. Each figure retains its stated order
+of averaging. Fig. 7(b) finds the threshold size within each realization,
+averages equivalent preparations with paired seeds, and then averages
+realizations with a crossing. Noncrossings remain undefined and their
+counts are reported. Persistence is assessed at the sampled times.
+
+In Fig. S7(a), purity changes at fixed initial Bloch direction. Panels
+(b,c) instead match populations, so purity and direction both change.
+Panel (d) maximizes the information gain over measurement axes and the
+finite time interval [0,20]. Optimized SBS distances and information gains
+are numerical candidates, not certified global optima.
 
 ## Recompute rather than redraw
 
-The processed-data workflow redraws the reported results; it does not
-independently regenerate the underlying trajectories or random fragments.
-The root `REPRODUCING_PAPER_A.md` documents the GPU batches and configurations.
-Full raw outputs are available from the authors on reasonable request.
-With the eight baseline batches under a chosen raw-data directory, exact
-independent-qubit reconstruction can be run on a CPU:
+The redraw command does not regenerate trajectories or rerun optimizations.
+The root `REPRODUCING_PAPER_A.md` documents GPU batches; full raw outputs are
+available from the authors on reasonable request. The newer exact studies
+run on CPU. From `paper_a/`, in a working copy where analysis outputs may be
+regenerated:
 
 ```sh
-python paper_a/scripts/validation/recalculate_exact.py --source-roots /path/to/raw/data --output-root /path/to/separate/exact/data
-python -m pytest paper_a/scripts/validation/test_recalculate_exact.py paper_a/scripts/validation/test_bootstrap_persistence.py -q
+python scripts/validation/plot_theta_sweeps.py
+python scripts/validation/plot_theta_preparation_map.py
+python scripts/validation/mixed_state_comparison.py --environment-qubits 3
+python scripts/validation/compare_matched_preparations.py
+python scripts/validation/scan_mixed_basis_size.py
 ```
 
-Install `pytest` for the tests. The additional basis-scan, field mean/width,
-and finite-size scripts accept their own raw-data arguments; use `--help`.
-The exact method assumes pure product witness preparations and no
-environment–environment interactions, as in this paper.
+The last three commands are separate from the quick redraw; SBS optimization
+can be expensive. The matched-preparation calculation reads the preceding
+mixed-state SBS results. All commands retain the paper's independent-witness
+assumption. The mixed-state calculations explicitly evolve density matrices
+or use equivalent reduced-state formulas.
 
-The software and this reproduction package are distributed under the
-repository's BSD-3-Clause license. The retained plotting scripts were copied
-from the author's research repositories; the source manifest records their
-origins. No manuscript draft, private research notes, or raw trajectories
-are needed by the plotting command.
+For the original exact reconstruction, provide the eight baseline raw batches:
+
+```sh
+python scripts/validation/recalculate_exact.py --source-roots /path/to/raw/data --output-root /path/to/separate/exact/data
+```
+
+From the repository root, install `pytest` and run the CPU validation suite:
+
+```sh
+python -m pytest paper_a/scripts/validation/test_recalculate_exact.py paper_a/scripts/validation/test_bootstrap_persistence.py paper_a/scripts/validation/test_threshold_sizes.py paper_a/scripts/validation/test_unified_scaling.py paper_a/scripts/validation/test_theta_sweeps.py paper_a/scripts/validation/test_mixed_state_comparison.py -q
+```
+
+The package is distributed under the repository's BSD-3-Clause license.
+No manuscript draft or private research notes are included.

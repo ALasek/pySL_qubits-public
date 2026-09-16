@@ -6,9 +6,8 @@
 \newcommand{\Env}{\mathcal{E}}
 \newcommand{\Frag}{\mathcal{F}}
 \newcommand{\Rem}{\mathcal{R}}
-\newcommand{\rev}[1]{\textcolor{blue}{#1}}
 \begin{document}
-    \begin{tikzpicture}[
+\begin{tikzpicture}[
         >=Latex,
         witness/.style={circle,draw,fill=white,minimum size=5mm,inner sep=0pt,font=\scriptsize},
         system/.style={circle,draw,thick,fill=gray!20,minimum size=7.5mm,inner sep=0pt,font=\small},
@@ -66,7 +65,7 @@
         \pgfmathsetmacro{\angn}{atan2(\nY,\nX)}
         \pgfmathsetmacro{\angr}{atan2(\rY,\rX)}
         \draw[thin] (\angn:{0.4*\R}) arc (\angn:\angr:{0.4*\R});
-        \node[font=\scriptsize,inner sep=1pt] at ({(\angn+\angr)/2}:{0.53*\R}) {\rev{$\zeta$}};
+        \node[font=\scriptsize,inner sep=1pt] at ({(\angn+\angr)/2}:{0.53*\R}) {$\zeta$};
         % conditional trajectory of the s=1 branch: rotation of r about n
         \pgfmathsetmacro{\sa}{sin(\pbeta+\ptheta)}
         \pgfmathsetmacro{\ca}{cos(\pbeta+\ptheta)}

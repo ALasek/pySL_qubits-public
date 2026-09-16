@@ -1,8 +1,8 @@
 # pySL
 
 This public repository starts from a fresh snapshot of the development
-repository. The `paper-a-v1.1.0` tag preserves the exact released source and
-processed data; subsequent commits update public-facing documentation.
+repository. The `paper-a-v1.2.0` release matches the final Paper A figures and
+processed data. The earlier `paper-a-v1.1.0` tag remains available.
 Earlier development history and branches are not included.
  
 ## Table of Contents
@@ -172,8 +172,9 @@ python pySLbatch.py --config batch_configs.mironowicz_theta_sweep --manifest-onl
 
 ### Paper-A suite
 
-`paper-a-v1.1.0` is the Paper-A successor release and includes the latest
-code, batch configurations, and the fixed-RMS Gaussian field mean/width study.
+`paper-a-v1.2.0` includes the final figure reproduction package, including
+angle sweeps and mixed-state comparisons, alongside the simulator, batch
+configurations, and fixed-RMS Gaussian field mean/width study.
 The earlier `paper-a-v1.0.0` release is not included in this public repository.
 
 The compact, public reproduction package is documented in

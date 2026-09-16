@@ -1,0 +1,159 @@
+{
+  "config": {
+    "nqubits_E": 16,
+    "run_seeds": [
+      3923535749,
+      3212275105,
+      4130349263,
+      1365772060,
+      2147774961,
+      3688406951,
+      1953186726,
+      938346551,
+      1860405821,
+      323417900,
+      1840093682,
+      2427933164,
+      1752525043,
+      3048241040,
+      4261507949,
+      1911150240,
+      315982210,
+      1636619970,
+      700337685,
+      1350579352,
+      3417787431,
+      1770275343,
+      3630083347,
+      2866662525
+    ],
+    "fragment_sample_count": 64,
+    "fragment_reuse_samples": true,
+    "H_SE_J": 0.1,
+    "seed_source": {
+      "path": "Paper_A_final_SubmissionMatchedLambda/runs/00776d7806c7fea980a1b3849bec3591c8bfd367496ff4ba219e2b31dadf5465/params.json",
+      "sha256": "2c3def40611d58875fb6c901d060647e6dbaaea8f1cf0a3c875055f3c8828e2c"
+    }
+  },
+  "theta_count": 121,
+  "time_window": [
+    20,
+    40
+  ],
+  "time_step": 1,
+  "preparations": [
+    0.0,
+    0.25,
+    0.5
+  ],
+  "field_rms_over_g": [
+    0.0,
+    0.5,
+    2.0,
+    10.0
+  ],
+  "cases": 2541,
+  "metrics": [
+    "chi_m2",
+    "chi_m8",
+    "min_q10_m8"
+  ],
+  "reduction": "Fragment mean, time median within realization, mean over realizations. Minimum metric: fragment q10, time minimum, realization mean.",
+  "intervals": "Pointwise 95% bootstrap intervals, 2000 whole-realization resamples, seed 20260915.",
+  "finer_time_grid_checks": [
+    {
+      "p": 0.25,
+      "profile": "uniform",
+      "rms_over_g": 0.0,
+      "theta": 1.0471975511965976,
+      "mean_difference": [
+        -4.890176395439446e-05,
+        -4.18881223938905e-06,
+        -0.0012554211401457533
+      ],
+      "max_realization_difference": [
+        0.013178884086278653,
+        0.0004587024857017896,
+        0.00946548837235306
+      ]
+    },
+    {
+      "p": 0.0,
+      "profile": "uniform",
+      "rms_over_g": 2.0,
+      "theta": 0.7853981633974483,
+      "mean_difference": [
+        0.0033039609906319414,
+        0.005617397599506857,
+        -0.0036173363438637106
+      ],
+      "max_realization_difference": [
+        0.020619571186731855,
+        0.03942201397801637,
+        0.021838995061210884
+      ]
+    },
+    {
+      "p": 0.25,
+      "profile": "gaussian",
+      "rms_over_g": 2.0,
+      "theta": 1.0471975511965976,
+      "mean_difference": [
+        0.0012101734164319626,
+        -8.590671394018146e-05,
+        -0.0008207995148376187
+      ],
+      "max_realization_difference": [
+        0.01203820554785795,
+        0.00210697695870099,
+        0.008313340934162139
+      ]
+    },
+    {
+      "p": 0.5,
+      "profile": "uniform",
+      "rms_over_g": 10.0,
+      "theta": 0.7853981633974483,
+      "mean_difference": [
+        -0.00026353527380988673,
+        -1.047888906240598e-05,
+        -0.0005810822797901923
+      ],
+      "max_realization_difference": [
+        0.010709947572843936,
+        0.0001503492829427744,
+        0.004644036398124829
+      ]
+    }
+  ],
+  "hashes": {
+    "scripts\\validation\\plot_theta_sweeps.py": "11310487463c276c8901a4660588b5eb06c4a529794b7f690ed3df5ad1100bfa",
+    "scripts\\validation\\recalculate_exact.py": "7cd00b4360774f8978ed80894b2803dc44a3984128378ef854f71a01e9cfbfa9",
+    "analysis\\theta_sweeps\\summary.csv": "2c24f937444b6b791d3392c2afccfacfc2f58bb4533cba4126e6acbb7059ca6b",
+    "analysis\\theta_sweeps\\realizations.npz": "ae44bb35a12fda78b9ecbe9c9f1f1d8cd2efcfeba6272f625721bc2d5ba59e3d"
+  },
+  "figure_hashes": {
+    "figures\\paper_a\\theta_record_information.pdf": "6b34e4e3270d1f9a1e525b75305287fd7d8f660de26c13a514dd715068e7e7b2",
+    "figures\\paper_a\\theta_record_information.png": "f918bcc07a744772847dfe4ee83f16e015e8d51d217b979278106735b8919d70",
+    "figures\\paper_a\\supplement\\theta_field_information.pdf": "0e8ce6329d3e99913aa3b92db408e7009439d4f4b962db1e646247a830f9a7f4",
+    "figures\\paper_a\\supplement\\theta_field_information.png": "cc82e5517a5c2daf81aba257dd6ac27f091bbf184ec2c1459b3f4bf4a7796409"
+  },
+  "plot_style_sha256": "f64e128bbbefbddb6423bac4237e960ff3bffea90b6bbe7323196bfd74f77c6d",
+  "plot_script_sha256": "def3f88c4f3c72c89738400b1dfb8e2ca79cffbed732a16b61b649332415990a",
+  "field_figure_preparations": [
+    0.5
+  ],
+  "archived_field_figure": {
+    "preparations": [
+      0,
+      0.25,
+      0.5
+    ],
+    "figure_hashes": {
+      "figures\\paper_a\\supplement\\theta_field_information_six_panel.pdf": "74cc1902b3325478c9496a2095fd74ea78242daf5278b183ac05fe54f2d27876",
+      "figures\\paper_a\\supplement\\theta_field_information_six_panel.png": "107c55ebf6cf8c1d35273de88431b14b0f211e64c9deed6414906d6eec1cda32"
+    },
+    "renderer_commit": "4f6801cb528b43601e101d5c35f23dd74f1ad8f5",
+    "renderer_script": "scripts/validation/plot_theta_sweeps.py"
+  }
+}

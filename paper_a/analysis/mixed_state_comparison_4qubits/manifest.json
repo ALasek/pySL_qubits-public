@@ -1,0 +1,60 @@
+{
+  "model": "S + 3 independent environment qubits; one observed",
+  "environment_qubits": 3,
+  "total_qubits": 4,
+  "observed_environment_qubits": 1,
+  "traced_environment_qubits": 2,
+  "coherence_convention": "Twice the off-diagonal block trace norm = |gamma|^(N_E-1)",
+  "source_doi": "10.3390/e24040467",
+  "source_equations": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    15,
+    17
+  ],
+  "g": 1.0,
+  "alpha1": 0.0,
+  "alpha3": 0.0,
+  "time": 1.0,
+  "field_range": [
+    0.0,
+    3.0
+  ],
+  "theta_values": [
+    0.0,
+    0.39269908169872414,
+    0.7853981633974483,
+    1.413716694115407
+  ],
+  "p_mix_values": [
+    0.0,
+    0.1,
+    0.25,
+    0.4,
+    0.5
+  ],
+  "distance_convention": "Trace norm, without factor 1/2, matching source Eq. 17",
+  "sbs_parameterization": "Two orthogonal pure local states on each qubit; mixture weight [0,1]",
+  "optimized_distances": "Numerical candidate minima (upper bounds); no global certificate",
+  "starts": 10,
+  "workers": 4,
+  "seed": 20260914,
+  "validation": "Independent doubled starts plus differential evolution at every SBS grid point",
+  "total_cases": 420,
+  "validation_cases": 420,
+  "max_validation_improvement_z": 4.40677263601752e-05,
+  "max_validation_improvement_free": 0.004368671885051079,
+  "full_matrix_checks": 64,
+  "max_reduced_state_error": 2.942091356217422e-15,
+  "max_fidelity_error": 1.4432899320127035e-15,
+  "max_holevo_error": 1.915134717478395e-15,
+  "elapsed_seconds": 144.2130075999885,
+  "python": "3.11.9",
+  "numpy": "2.3.5",
+  "scipy": "1.15.2",
+  "script_sha256": "3234f3213c04bb4db0eb483bb0eeca985a00c92eb4e774dab839de098f3a43f7",
+  "additional_optimizer_audit": "additional_optimizer_audit.json"
+}

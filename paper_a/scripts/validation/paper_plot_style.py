@@ -16,6 +16,16 @@ def apply_style():
     })
 
 
+# Figure-internal titles must use the main-text terminology.
+TITLE_REPLACEMENTS = {
+    r"Mean pointer information, $\Lambda=3/4$": r"Mean Holevo information, $\Lambda=3/4$",
+    "Conservative pointer information": "10th-percentile Holevo information",
+    "Conservative discord-like remainder": "90th-percentile pointer-basis remainder",
+    r"Aligned recorder ($p=1/2$, $\theta=0$), $N_E=16$": r"Blind preparation ($p=1/2$, $\theta=0$), $N_E=16$",
+    r"Aligned-recorder fragment scaling ($p=1/2$, $\theta=0$)": r"Fragment-size dependence at the blind preparation ($p=1/2$, $\theta=0$)",
+}
+
+
 def save_figure(fig, path, **kwargs):
     apply_style()
     printed_width = {"holevo_plateau_overview.pdf": 3.4,
@@ -26,6 +36,7 @@ def save_figure(fig, path, **kwargs):
         label.set_fontfamily("serif")
         label.set_usetex(True)
         label.set_fontsize(max(label.get_fontsize(), minimum_size))
-        label.set_text(label.get_text().replace("H_Z(S)", r"H_Z(\mathcal{S})")
+        text = TITLE_REPLACEMENTS.get(label.get_text(), label.get_text())
+        label.set_text(text.replace("H_Z(S)", r"H_Z(\mathcal{S})")
                        .replace("N_E", r"N_{\mathcal{E}}"))
     fig.savefig(path, **kwargs)

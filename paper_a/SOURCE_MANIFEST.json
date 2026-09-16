@@ -1,6 +1,6 @@
 {
-  "release": "paper-a-v1.1.0",
-  "numerical_source_manuscript_commit": "217f52df2d1cd8c7aef0f16ec3962f0faea8b8df",
+  "release": "paper-a-v1.2.0",
+  "numerical_source_manuscript_commit": "ec69c940474a526919c278436ef4eec31c946f6c",
   "origins": {
     "scripts/plot_holevo_plateau_overview.py": "QD-summary-Imperfect-CNOT/scripts/plot_holevo_plateau_overview.py",
     "scripts/plot_matched_lambda_fragment_sweep.py": "QD-summary-Imperfect-CNOT/scripts/plot_matched_lambda_fragment_sweep.py",
@@ -9,12 +9,31 @@
   },
   "sha256": {
     ".gitignore": "7d02131e4fcb5553e66d5321f395783474759cd505f91ad21649f0687495b8b5",
+    "README.md": "be132681a2245a96eae8cff7d15492dabbd8050334ad71eaf755b5b0e1fb3d3c",
+    "VALIDATION.json": "bb572ce39e43c8f21b8cd151f6c9f3617821974182663f005640a58f5f1d97a3",
     "analysis/field_mean_width_exploration_2026_09_09/realization_minima.npz": "4f6c531ec13ed28f1b9a4de980ec4be5fd5a6c3fb43f6e7cad1c65bd99954041",
     "analysis/field_mean_width_exploration_2026_09_09/summary.csv": "c9b527bdf21d39cdcd814676612edbe4955ed0960cfa36c8633e9cd1919eeb31",
     "analysis/fragment_percentiles_2026_09_08/threshold_comparison.csv": "4dc51ca886649b24bd59834ff0201b4872623d57983e511453411cebfca95aa8",
+    "analysis/matched_pure_mixed/local_records.csv": "159efa6cd3081679e1efa7e65ef343de47fabca85354a135fe982576dba6cdf5",
+    "analysis/matched_pure_mixed/manifest.json": "78604d4eeddbe419451e1d9880636477259b198255a93b762aa5b51b60f6c558",
+    "analysis/matched_pure_mixed/sbs_comparison.csv": "f1355d767256671189d534f1bd93e96c9d3dce4972d63d44af29b95cfe639cf9",
+    "analysis/mixed_basis_size/fixed_time.csv": "5d92f06b94ff062247fe5547244151e4331e4be5ee985372a9abb1567188b050",
+    "analysis/mixed_basis_size/manifest.json": "6b93343d9f94a70d33747148e98b74d44928c6c7acc6231d15ab1ef801cb3e11",
+    "analysis/mixed_basis_size/refinement.csv": "e73e30f56cdbe3c8de8d6cc2e396c9d61d5957e843972a2a882787ffe9a06d87",
+    "analysis/mixed_basis_size/time_maxima.csv": "960b189d18c8c76ec12607d340ac39bff8787f9f347cd517d3ccccd4606be1f4",
+    "analysis/mixed_state_comparison_4qubits/local_records.csv": "71f808db066b67f82b41d97ff8fad5b1be6debad7fd0ac8fde652960c0980eca",
+    "analysis/mixed_state_comparison_4qubits/manifest.json": "4e21b67bbcd7ac03f423933662cdd36a3d27e10122b4c97cea43c5641f289ffa",
+    "analysis/mixed_state_comparison_4qubits/sbs_distances.csv": "0608f8ee005eb356bef66bd9108e66f4fadeb4e0da124c97b1afbd1c6938345d",
     "analysis/pointer_basis_expanded_2026_09_09/curves.csv": "5da8816b4e2b6fb5c9a6102e42b89a3337b9d5b8ca12d04f58b09797c5ca647c",
     "analysis/supplement_polish_2026_09_09/s1_paired_differences.json": "e0f1ddc5b5335fb7809ec92c6da0aae44fca6fd73046c0396e4ce3e4ebc0d87f",
     "analysis/supplement_polish_2026_09_09/s1_points.csv": "e7976c862eab47a0d9d5fee9e12ff8b93ce29fa2d6592b4230c0a528474cd5ca",
+    "analysis/theta_sweeps/config.json": "defba35f367fe462e476b968f8f35a66f931a038ab076aaf6c2c5f97e2cf837e",
+    "analysis/theta_sweeps/manifest.json": "0d4b31fb68aef6c328ec41fb36aa565ddf22f1e98362148cd675f6f135ad4b55",
+    "analysis/theta_sweeps/preparation_map.npz": "c93655f096c6b78c4ace46b8e0304ccb4407fc63d84d6484a4dc77a5a2a8197d",
+    "analysis/theta_sweeps/preparation_map_checks.json": "f1d664627feb52bf2b2475dc0f0f3a88ffe2aba4d2265ba5ed3781f32f8e9032",
+    "analysis/theta_sweeps/preparation_map_manifest.json": "aaed6eaeac2e930fbc8ae486bb50384a7d7dc4c91ff2231a27ea5608a22f2982",
+    "analysis/theta_sweeps/realizations.npz": "ae44bb35a12fda78b9ecbe9c9f1f1d8cd2efcfeba6272f625721bc2d5ba59e3d",
+    "analysis/theta_sweeps/summary.csv": "c04026c3cbacc3f34ee0805aeadf0656e4d85f8c953b7379df492f98981fddf0",
     "figures/paper_a/source_manifests/exact_2026_09_05/plots/field/field_profile_fragment_curves.csv": "ee4009b5a4c8fab82b7dd48cb0b94f07b8c0c458bfbc6bbc2a7109b7c86500c8",
     "figures/paper_a/source_manifests/exact_2026_09_05/plots/field/field_profile_points.csv": "b6eb8d45b1438092496e7eb3b1c2cb74f9350274e19c3823c2a293307fe3b992",
     "figures/paper_a/source_manifests/exact_2026_09_05/plots/matched_sweep/matched_lambda_fragment_sweep.csv": "6a370d23245e764cf615cab5c3feb7b7448ba2b354a1b9f948aee4d3e8d4bc16",
@@ -26,10 +45,9 @@
     "figures/paper_a/source_manifests/n24_fixed_time_metrics.csv": "89467968dbec3ba4ebda3e011c57a93ba8c020014a4bd85e56b8bb3ef01f9286",
     "figures/paper_a/source_manifests/stability_endpoints_compact.csv": "bea270b49ecc3c1fa37192aba402dc683342118cb68ffbd1337e5ed9e9cb0337",
     "figures/paper_a/source_manifests/threshold_sizes_complete_2026_09_08/threshold_sizes_manifest.json": "8192936e3d850dbd6e9287a45cccc829e960f3fdfe458253dfe2e0750640b5c8",
-    "README.md": "fb390b386096ccc92263893c6175f9741319908001dcabb6d23ddc4404bffbea",
-    "reproduce_figures.py": "2d9e57fb8901b1ff424563a678006084ad6f9c43cd81a6ea30bb8d5656acd215",
+    "reproduce_figures.py": "18821e6068189854fc4a15534191a0d7a9cf628ba08430d5ca93a772ec9beffe",
     "requirements.txt": "d02c43f3f0ec501431de6ab3a0df34c60e11d563e035b64b12e68f0223dd2149",
-    "schematic.tex": "78de817caa4f28f3afb35823c01d5d91f57dd2cb6df45c57b3350da28e1c9520",
+    "schematic.tex": "05f5e0469dbfab8d5324e47f00b7a22e9bdd4fa26c44248ed7ecf326b358a961",
     "scripts/plot_holevo_plateau_overview.py": "6ec840fe17f863145ebd7d5191bcee7413894118eb62e9148bb38dd3f21263bc",
     "scripts/plot_matched_lambda_fragment_sweep.py": "e7e1565873096a7464a7c325ec48d8ec7a7e4c039e340a71c873501b713c539b",
     "scripts/validation/analyze_low_field.py": "759a01d98ef854ec220ec1706e6f09a543983e0cec4b6fbbb30ce464e6c501e2",
@@ -37,14 +55,19 @@
     "scripts/validation/bootstrap_persistence.py": "4994bf05ff2263eb64f4b032dace0300e2087e0fd711a9ff45421529c50aa60f",
     "scripts/validation/check_pointer_exact.py": "d13f56efa14bb25540fb1ec70504458f90e22b9d2ea68ed30656e578ccb48053",
     "scripts/validation/compare_fragment_percentiles.py": "41db714eb82f9bca1b7ec0ad287e8c38c756cba59f4a0cce8e3709537f948d11",
+    "scripts/validation/compare_matched_preparations.py": "34651d447ea923044ff84fa59b12c1fcd81ba3bceca5fee2870017be3c959ee1",
     "scripts/validation/exact_stored_check.py": "76fb85df5e7f3ee5b784a0bfc5c573abdcb517ba063a0e52374859070286f1b4",
     "scripts/validation/expand_pointer_basis.py": "71d3cb627a66c6c0e29def8c712005cf4820f8609622ef0bd1234a4441911c73",
     "scripts/validation/explore_field_mean_width.py": "4d540cb330ae3b93ac4ba54c1dda4050eb0a191d1d7702cc079e6db8c074a5a7",
+    "scripts/validation/mixed_state_comparison.py": "bf765480c6431482386dab78fbefdcf7cd7397aa490d905c0b1e289e44bd19ea",
     "scripts/validation/numerical_audit.py": "896a2c5b489fb31d7274b87eae5886e7933bf1b2ea500c791419fce24b41d82d",
-    "scripts/validation/paper_plot_style.py": "c5d57db72bd9a4e3ff0c44908eb95f26c443b795f826f3fccd21380d505d3ddb",
+    "scripts/validation/paper_plot_style.py": "f64e128bbbefbddb6423bac4237e960ff3bffea90b6bbe7323196bfd74f77c6d",
     "scripts/validation/plot_exact_fragment_sweep.py": "28509730ec03bb504c1fa3443f28daf0ff739f64eacc0d338a6a7f23dd594a69",
     "scripts/validation/plot_field_mean_width_supplement.py": "e52c282a48152ea6ef74e331530c2c23704dd0dffb4c31a1518aadf42db16b2b",
+    "scripts/validation/plot_mixed_supplement.py": "a2964c047c6244fd5d72ed4b1fee9d641ff3316402d90e3445c35ea5a8ad424a",
     "scripts/validation/plot_saved_s1_s3.py": "53f19ee2a24d10652179548110d1f13c11c452a668f6cd61edb598a1d4c9cba0",
+    "scripts/validation/plot_theta_preparation_map.py": "e76b4d2f9e47bb7d8724bfb461ad607829c4dffdfad24090b8e0c116012bb911",
+    "scripts/validation/plot_theta_sweeps.py": "1406a77c0e782b350149a00c12a89a6be65f25b140683bd542229a249f341460",
     "scripts/validation/plot_threshold_sizes.py": "2ae458029f08228d71808263353775f4a0ecbe69020018ee6e90cdd2b437fbb0",
     "scripts/validation/plot_unified_scaling.py": "006091319d0a72940f1792613fa655aa5b7213432226cdf57093e180bd8b2082",
     "scripts/validation/polish_s1_s3.py": "ae83d714f4121d65dccb74301bb5ccf55f17e0ad1ab9a63d3b4c83c43f87b9f7",
@@ -53,11 +76,82 @@
     "scripts/validation/replot_exact.py": "13a7c79331f7e7d64975db2fdbf7425281dea1688d01ace540ae17bc6f43978e",
     "scripts/validation/replot_main_typography.py": "fc3607a6d63770512032b57939d4c34ab390a7576cd741a801a7fd5956a25937",
     "scripts/validation/replot_saved_typography.py": "c12bf06b6ab3c92af45b6707648eb3202afc9eef022dc7c1de6386031fce75d7",
+    "scripts/validation/scan_mixed_basis_size.py": "9b20d1157d8ee8fb36ca98499934f8311aec6ae661a1bd5eaaa3face7dd432ce",
+    "scripts/validation/scan_mixed_basis_time.py": "0f047beeeedabb1ff8e2a320215f224765219760e004c0ad7fcbb2dc61ef0458",
     "scripts/validation/test_bootstrap_persistence.py": "c19a7cad345c77a9855ee4f0f5763777f61b9c99a253323bb823857ea5971601",
+    "scripts/validation/test_mixed_state_comparison.py": "60fe8a6124884cb9752b2f44f166a9a6f05f2bc103e067565662ce11c4feb1b2",
     "scripts/validation/test_recalculate_exact.py": "ff4912b5d1f2c45f4756714c2704abbe4609e34da099c147b0076ac9e30ef917",
+    "scripts/validation/test_theta_sweeps.py": "faf8b04318ef79dce6b3046b65d3a92bf313c246214eb7e7dabe32faa479da8f",
     "scripts/validation/test_threshold_sizes.py": "9956d13187d11ed8bc72e6aeaaea23660e97a0410109d0fafa589ec15132b1ad",
-    "scripts/validation/test_unified_scaling.py": "6f296f54a809e27b17e661967d4ef242e4b4f3f9054c34112797f547fcaa9961",
-    "VALIDATION.json": "3ef05c025c86377a2038ee26de1da828eadbde6f958cb6ead21130f862958610"
+    "scripts/validation/test_unified_scaling.py": "6f296f54a809e27b17e661967d4ef242e4b4f3f9054c34112797f547fcaa9961"
   },
-  "hash_convention": "SHA-256 of UTF-8 text with LF line endings; NPZ files use raw bytes."
+  "hash_convention": "SHA-256 of UTF-8 text with LF line endings; NPZ files use raw bytes. Manuscript PDF hashes use raw bytes.",
+  "adaptations": [
+    "Three new plotters accept explicit output paths; theta-map redraw leaves the input manifest unchanged.",
+    "Mixed-figure output provenance uses package-relative input paths.",
+    "Theta seed-source provenance paths are batch-relative; the numerical seeds and settings are unchanged.",
+    "Historical analysis manifests retain calculation-time hashes; this manifest hashes the packaged files."
+  ],
+  "manuscript_figures": {
+    "theta_preparation_map.pdf": {
+      "number": "2",
+      "source_pdf_sha256": "4678ce30e5ca464b2556ea59dc5dcac8d5782e324e6576a101e7699d8f672129"
+    },
+    "holevo_plateau_overview.pdf": {
+      "number": "3",
+      "source_pdf_sha256": "2cf30483948f6b6922f853d46b5dd201ddace48986d425d752e20767ea95d1b3"
+    },
+    "matched_lambda_fragment_sweep.pdf": {
+      "number": "4",
+      "source_pdf_sha256": "33c60d456ea71f44a30abd51f76186e13a2ad640035f0e02bc155211a6f7b2ba"
+    },
+    "aligned_field_profiles.pdf": {
+      "number": "5",
+      "source_pdf_sha256": "bc35ce0e13ced9a9a7e04a10f4a578562a752fad962cee8147086f97f259e18c"
+    },
+    "fragment_scaling.pdf": {
+      "number": "6",
+      "source_pdf_sha256": "b012882acf74c1bb829e666e2a81108453afe17c7bf66506ab320ebb106d6682"
+    },
+    "fragment_threshold_scaling.pdf": {
+      "number": "7",
+      "source_pdf_sha256": "17f46d07f8572b32a6293f231bfef908304072b8c47e7df8fa1497e8f9ba391c"
+    },
+    "stability_theta_pi4.pdf": {
+      "number": "8",
+      "source_pdf_sha256": "100e28ffc887e9ee9657a46c922ab20dbd4505ea340441bfa123861747a2891c"
+    },
+    "pointer_basis_expanded.pdf": {
+      "number": "9",
+      "source_pdf_sha256": "45433dc575fc56049630e52f2b185620260f3f05687c639b1215068a350f0ec7"
+    },
+    "supplement/matched_lambda_records.pdf": {
+      "number": "S1",
+      "source_pdf_sha256": "39bcbeb1753d4f0634b077f1f5a51047af1c993a6b8ae43ba20301af640d413b"
+    },
+    "supplement/higher_n_validation.pdf": {
+      "number": "S2",
+      "source_pdf_sha256": "655ee7e962c51ce65c8e6db1db42c33e32b67963fa85aa93484f6580836e3cc8"
+    },
+    "supplement/threshold_percentile_comparison.pdf": {
+      "number": "S3",
+      "source_pdf_sha256": "bb1667e931002c85195cc4bda267d824d9a5bf21fac27e831c3cea63329279f8"
+    },
+    "supplement/stability_endpoints_compact.pdf": {
+      "number": "S4",
+      "source_pdf_sha256": "d5eba3b2b815db34f1a30a2f9238dddfe7a1addfb5cb7dab8e0f9c0fbe4b34ec"
+    },
+    "supplement/field_mean_width_comparison.pdf": {
+      "number": "S5",
+      "source_pdf_sha256": "5ea820d493b3618e06fcdde72465d3da3080a931e50820d56be3f9c339a2d8c9"
+    },
+    "supplement/theta_field_information.pdf": {
+      "number": "S6",
+      "source_pdf_sha256": "0e8ce6329d3e99913aa3b92db408e7009439d4f4b962db1e646247a830f9a7f4"
+    },
+    "supplement/mixed_state_comparison.pdf": {
+      "number": "S7",
+      "source_pdf_sha256": "d2b5ea174b347f9b01c38108b20a8f8015ba77483047f1aee13117b1cbf15003"
+    }
+  }
 }

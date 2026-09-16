@@ -1,0 +1,87 @@
+{
+  "p_mix": 0.1,
+  "initial_purity": 0.82,
+  "observed_witnesses": 1,
+  "coupling": 1,
+  "sizes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96,
+    128,
+    192,
+    256
+  ],
+  "fields": [
+    0.0,
+    1.5,
+    3.0
+  ],
+  "fixed_times": [
+    1.0
+  ],
+  "fixed_time_thetas": [
+    0.7853981633974483,
+    1.413716694115407
+  ],
+  "envelope_theta": 1.413716694115407,
+  "time_window": [
+    0,
+    20
+  ],
+  "coarse_time_step": 0.1,
+  "adaptive_grid": "Geometric offsets toward zero; also toward exact even-integer revivals when h=0.",
+  "optimizer": "Hemisphere grid and joint local time/axis refinement; no global certificate.",
+  "fixed_cases": 96,
+  "envelope_cases": 48,
+  "refinement_cases": 9,
+  "dense_max_gain_difference": 2.9306002069517945e-11,
+  "fits": [
+    {
+      "h": 0.0,
+      "fit_min_size": 32,
+      "power_exponent": -1.0109111213430122,
+      "power_log_rmse": 0.0022801240881860194,
+      "exponential_rate": 0.008873895921348495,
+      "exponential_log_rmse": 0.19620536685995915
+    },
+    {
+      "h": 1.5,
+      "fit_min_size": 32,
+      "power_exponent": -0.9799156381315353,
+      "power_log_rmse": 0.0023380746105222242,
+      "exponential_rate": 0.008602111744867687,
+      "exponential_log_rmse": 0.19011349463576466
+    },
+    {
+      "h": 3.0,
+      "fit_min_size": 32,
+      "power_exponent": -1.0119170015283196,
+      "power_log_rmse": 0.004238563661585118,
+      "exponential_rate": 0.00888388273252156,
+      "exponential_log_rmse": 0.19613157202746437
+    }
+  ],
+  "elapsed_seconds": 40.45679319999181,
+  "sources": {
+    "scan_mixed_basis_size.py": "9b20d1157d8ee8fb36ca98499934f8311aec6ae661a1bd5eaaa3face7dd432ce",
+    "scan_mixed_basis_time.py": "0f047beeeedabb1ff8e2a320215f224765219760e004c0ad7fcbb2dc61ef0458",
+    "mixed_state_comparison.py": "bf765480c6431482386dab78fbefdcf7cd7397aa490d905c0b1e289e44bd19ea",
+    "paper_plot_style.py": "f64e128bbbefbddb6423bac4237e960ff3bffea90b6bbe7323196bfd74f77c6d"
+  },
+  "bound_checks": {
+    "cases": 144,
+    "max_entropy_identity_error": 6.217248937900877e-15,
+    "max_exponential_bound_excess": -1.4076918766319736e-182,
+    "max_uniform_bound_excess": -0.0017965788342413384
+  }
+}

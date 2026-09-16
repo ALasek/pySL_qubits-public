@@ -1,15 +1,19 @@
 # Reproducing Paper A
 
-`paper-a-v1.1.0` (2026-09-09) is the successor Paper-A software release. It
-captures the current simulator, batch configurations, analysis code, and the
-fixed-RMS Gaussian field mean/width study. The historical `paper-a-v1.0.0` release is not included in this public
-repository.
+`paper-a-v1.2.0` (2026-09-16) matches the final Paper A figures. It adds the
+preparation/interaction-angle map, local-field angle sweeps, and mixed-state
+comparisons to the CPU reproduction package. The simulator and GPU batch
+configurations are unchanged from `paper-a-v1.1.0`. The historical
+`paper-a-v1.0.0` release is not included in this public repository.
 
 ## Compact public reproduction
 
 Follow [paper_a/README.md](paper_a/README.md) to regenerate the released
 figures and tables from the saved package on CPU. That workflow does not need
-the raw production simulation outputs or the manuscript notes repository.
+the raw simulation outputs or the manuscript notes repository. It redraws
+main Figs. 2–9 and Supplemental Figs. S1–S7; Fig. 1 is supplied as standalone
+TikZ source. See the same README for exact CPU recalculation commands for
+the angle sweeps and mixed-state comparisons.
 
 ## Environment
 
@@ -28,7 +32,7 @@ python -m pip install -r requirements-cuda12.txt  # CUDA 12
 
 Use NVIDIA's current [Windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/) or [Linux](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/) documentation if the host itself needs CUDA setup. These project instructions do not require removing or replacing an installed driver.
 
-## Fig. 6(b) threshold estimator
+## Fig. 7(b) threshold estimator
 
 At the specified time, construct the fragment-q10 Holevo curve separately for
 each realization and find its first threshold fragment size. For paired
@@ -61,7 +65,7 @@ variable is required.
 | Field-profile control | `python pySLbatch.py --config batch_configs.paper_a_field_control --profile final --manifest-only` | `python pySLbatch.py --config batch_configs.paper_a_field_control --profile final --workers 1 --gpu-ids 0 --skip-existing` |
 | Higher-ℕ validation | `python scripts/run_paper_a_higher_n_validation.py --profile final --dry-run` | `python scripts/run_paper_a_higher_n_validation.py --profile final --workers 1 --gpu-ids 0 --skip-existing` |
 | Finite-ℕ threshold | `python scripts/run_paper_a_fragment_threshold_finite_n.py --profile final --dry-run` | `python scripts/run_paper_a_fragment_threshold_finite_n.py --profile final --workers 1 --gpu-ids 0 --skip-existing` |
-| Intermediate-ℕ Fig. 6(b) threshold | `python scripts/run_paper_a_fragment_threshold_finite_n.py --intermediate --profile final --dry-run` | `python scripts/run_paper_a_fragment_threshold_finite_n.py --intermediate --profile final --workers 1 --gpu-ids 0 --skip-existing` |
+| Intermediate-ℕ Fig. 7(b) threshold | `python scripts/run_paper_a_fragment_threshold_finite_n.py --intermediate --profile final --dry-run` | `python scripts/run_paper_a_fragment_threshold_finite_n.py --intermediate --profile final --workers 1 --gpu-ids 0 --skip-existing` |
 | Λ = (2 + √3)/4 threshold completion | `python pySLbatch.py --config batch_configs.paper_a_fragment_threshold_lambda0933 --profile final --manifest-only` | `python pySLbatch.py --config batch_configs.paper_a_fragment_threshold_lambda0933 --profile final --workers 1 --gpu-ids 0 --skip-existing` |
 | Low-field refinement | `python pySLbatch.py --config batch_configs.paper_a_low_field_refinement --profile final --manifest-only` | `python pySLbatch.py --config batch_configs.paper_a_low_field_refinement --profile final --workers 1 --gpu-ids 0 --skip-existing` |
 | Fixed-RMS field mean/width | `python pySLbatch.py --config batch_configs.paper_a_field_mean_width --profile final --manifest-only` | `python pySLbatch.py --config batch_configs.paper_a_field_mean_width --profile final --workers 1 --gpu-ids 0 --skip-existing` |

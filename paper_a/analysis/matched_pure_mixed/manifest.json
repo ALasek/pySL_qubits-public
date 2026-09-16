@@ -1,0 +1,38 @@
+{
+  "environment_qubits": 3,
+  "observed_environment_qubits": 1,
+  "time": 1.0,
+  "g": 1.0,
+  "populations": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "theta_values": [
+    0.0,
+    0.39269908169872414,
+    0.7853981633974483,
+    1.413716694115407
+  ],
+  "field_range": [
+    0.0,
+    3.0
+  ],
+  "preparation": "Same populations; off-diagonal entry sqrt(p(1-p)) for pure and zero for mixed",
+  "newly_computed_pure_sbs_cases": 252,
+  "reused_mixed_sbs_cases": 252,
+  "starts": 10,
+  "independent_validation_starts": 20,
+  "differential_evolution_each_point": true,
+  "numerical_minima": "Best feasible candidates, no global certificate",
+  "max_optimizer_refinement_free": 0.0023172799262101695,
+  "max_optimizer_refinement_z": 1.0941789141405422e-11,
+  "max_full_evolution_error": 2.942091356217422e-15,
+  "max_fidelity_error": 1.4432899320127035e-15,
+  "max_holevo_error": 2.5500435096859064e-15,
+  "elapsed_seconds": 84.38767409999855,
+  "baseline": "analysis\\mixed_state_comparison_4qubits\\sbs_distances.csv",
+  "baseline_sha256": "fac4a081523911dc754c06e42cf177bf142fac2b2a6bee20371e63487fa1dd19",
+  "script_sha256": "34651d447ea923044ff84fa59b12c1fcd81ba3bceca5fee2870017be3c959ee1",
+  "solver_sha256": "bf765480c6431482386dab78fbefdcf7cd7397aa490d905c0b1e289e44bd19ea"
+}
