@@ -4,11 +4,13 @@ title: "pySL_qubits: Quantum Darwinism simulation and analysis software"
 authors:
   - family-names: Lasek
     given-names: Aleksander
+    orcid: "https://orcid.org/0000-0001-8077-8178"
+    affiliation: "University of Gdańsk"
 type: software
-version: 1.2.0
-date-released: 2026-09-16
+version: 1.2.1
+date-released: 2026-09-30
 repository-code: "https://github.com/ALasek/pySL_qubits-public"
-url: "https://github.com/ALasek/pySL_qubits-public/releases/tag/paper-a-v1.2.0"
+url: "https://github.com/ALasek/pySL_qubits-public/releases/tag/paper-a-v1.2.1"
 license: BSD-3-Clause
 keywords:
   - quantum Darwinism

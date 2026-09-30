@@ -1,5 +1,19 @@
 # Release notes
 
+## paper-a-v1.2.1 — 2026-09-30
+
+Metadata-only archival release for the Zenodo GitHub integration. The
+simulation code, batch configurations, analysis scripts, processed data, and
+figures are identical to `paper-a-v1.2.0`.
+
+- Updated citation and Zenodo metadata to version 1.2.1.
+- Added the software author's ORCID and affiliation.
+- Published a new GitHub release after enabling the Zenodo integration.
+
+Validation: the Git diff against `paper-a-v1.2.0` is restricted to citation
+metadata and root documentation. No simulations or numerical analyses were
+rerun because their inputs and implementation are unchanged.
+
 ## paper-a-v1.2.0 — 2026-09-16
 
 This release matches the final Paper A figure set: main Figs. 2–9 and

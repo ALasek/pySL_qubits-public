@@ -3,6 +3,8 @@
 This public repository starts from a fresh snapshot of the development
 repository. The `paper-a-v1.2.0` release matches the final Paper A figures and
 processed data. The earlier `paper-a-v1.1.0` tag remains available.
+`paper-a-v1.2.1` is a metadata-only archival release with the same code and data
+as `paper-a-v1.2.0`, published after enabling Zenodo integration.
 Earlier development history and branches are not included.
  
 ## Table of Contents

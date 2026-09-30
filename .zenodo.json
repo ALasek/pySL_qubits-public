@@ -1,7 +1,9 @@
 {
   "creators": [
     {
-      "name": "Lasek, Aleksander"
+      "name": "Lasek, Aleksander",
+      "orcid": "0000-0001-8077-8178",
+      "affiliation": "University of Gdańsk"
     }
   ],
   "description": "GPU simulation, batch configuration, and analysis software used for the Paper A study of imperfect controlled-NOT record formation in quantum Darwinism.",
@@ -14,5 +16,7 @@
   "license": "BSD-3-Clause",
   "title": "pySL_qubits: Quantum Darwinism simulation and analysis software",
   "upload_type": "software",
-  "version": "1.2.0"
+  "version": "1.2.1",
+  "publication_date": "2026-09-30",
+  "access_right": "open"
 }
